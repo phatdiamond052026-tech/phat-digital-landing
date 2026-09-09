@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Huynh Tien Phat - Thu thach doanh nghiep so tinh gon</title>
+    <meta
+      name="description"
+      content="Thu thach 2 ngay giup chuyen gia, nguoi co su nghiep va chu doanh nghiep nho bien chuyen mon thanh doanh nghiep so tinh gon."
+    />
+    <style>
+      :root {
+        --ink: #09251a;
+        --forest: #063f2d;
+        --green: #0c7a49;
+        --lime: #baf24a;
+        --mint: #ecfff2;
+        --soft: #f7fff4;
+        --line: rgba(9, 37, 26, 0.16);
+        --white: #ffffff;
+        --gold: #ffd966;
+        --danger: #e43d30;
+        --shadow: 0 22px 60px rgba(6, 63, 45, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--soft);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(6, 63, 45, 0.94);
+        color: var(--white);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+      }
+
+      .topbar-inner {
+        width: min(1120px, calc(100% - 32px));
+        min-height: 64px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .brand span {
+        color: var(--lime);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .nav a {
+        text-decoration: none;
+        opacity: 0.9;
+      }
+
+      .nav a:hover {
+        opacity: 1;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 22px;
+        border: 0;
+        border-radius: 8px;
+        background: var(--lime);
+        color: #062416;
+        box-shadow: 0 12px 26px rgba(186, 242, 74, 0.28);
+        font-weight: 950;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .button.dark {
+        background: var(--forest);
+        color: var(--white);
+        box-shadow: 0 12px 26px rgba(6, 63, 45, 0.18);
+      }
+
+      .button.full {
+        width: 100%;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(6, 63, 45, 0.96), rgba(4, 91, 54, 0.9)),
+          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/6aa037e9bfc1456f8c670083.png");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 150px;
+        background: linear-gradient(0deg, var(--soft), rgba(247, 255, 244, 0));
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        width: min(1120px, calc(100% - 32px));
+        min-height: calc(100vh - 64px);
+        margin: 0 auto;
+        padding: 76px 0 96px;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 44px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 9px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--lime);
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0;
+        max-width: 760px;
+        font-size: clamp(42px, 6vw, 78px);
+        line-height: 0.94;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero h1 strong {
+        color: var(--lime);
+      }
+
+      .hero-sub {
+        max-width: 650px;
+        margin: 24px 0 0;
+        font-size: clamp(18px, 2vw, 23px);
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 650;
+      }
+
+      .hero-list {
+        display: grid;
+        gap: 12px;
+        margin: 28px 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .hero-list li,
+      .check-list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .hero-list li::before,
+      .check-list li::before {
+        content: "✓";
+        flex: 0 0 24px;
+        width: 24px;
+        height: 24px;
+        display: inline-grid;
+        place-items: center;
+        border-radius: 6px;
+        background: var(--lime);
+        color: #0a2a1d;
+        font-weight: 950;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .scarcity {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .video-card {
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .video-frame {
+        aspect-ratio: 16 / 10;
+        display: grid;
+        place-items: center;
+        background:
+          linear-gradient(180deg, rgba(9, 37, 26, 0.1), rgba(9, 37, 26, 0.72)),
+          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/69e6357b6da81710dbef4758.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .play {
+        width: 78px;
+        height: 78px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--lime);
+        color: var(--forest);
+        font-size: 28px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      }
+
+      .video-caption {
+        padding: 22px;
+        background: var(--white);
+        color: var(--ink);
+      }
+
+      .video-caption b {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 20px;
+      }
+
+      .section {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 76px 0;
+      }
+
+      .section.tight {
+        padding-top: 30px;
+      }
+
+      .section-title {
+        max-width: 860px;
+        margin: 0 auto 36px;
+        text-align: center;
+      }
+
+      .section-title .label {
+        display: inline-block;
+        margin-bottom: 14px;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(32px, 4.5vw, 54px);
+        line-height: 1.02;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .section-title p {
+        margin: 18px auto 0;
+        max-width: 760px;
+        font-size: 18px;
+        line-height: 1.55;
+        color: rgba(9, 37, 26, 0.78);
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 26px;
+        box-shadow: 0 12px 30px rgba(6, 63, 45, 0.07);
+      }
+
+      .card h3 {
+        margin: 0 0 12px;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .card p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.55;
+        color: rgba(9, 37, 26, 0.75);
+      }
+
+      .pain .card {
+        border-left: 7px solid var(--green);
+      }
+
+      .quote-band {
+        background: var(--forest);
+        color: var(--white);
+      }
+
+      .quote-band .section {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .portrait {
+        min-height: 440px;
+        border-radius: 8px;
+        background:
+          linear-gradient(180deg, rgba(6, 63, 45, 0), rgba(6, 63, 45, 0.3)),
+          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/6aa037e9641597c752b0cd3a.png");
+        background-size: cover;
+        background-position: center;
+        box-shadow: var(--shadow);
+      }
+
+      .letter .label {
+        color: var(--lime);
+      }
+
+      .letter h2 {
+        color: var(--white);
+      }
+
+      .letter p {
+        margin: 18px 0 0;
+        font-size: 19px;
+        line-height: 1.62;
+        color: rgba(255, 255, 255, 0.84);
+      }
+
+      .highlight {
+        color: var(--lime);
+        font-weight: 900;
+      }
+
+      .cta-band {
+        background: linear-gradient(135deg, var(--lime), #f2ffb3);
+        color: #082517;
+      }
+
+      .cta-band .section {
+        padding: 42px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 26px;
+      }
+
+      .cta-band h2 {
+        max-width: 760px;
+        font-size: clamp(28px, 3vw, 42px);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 18px;
+      }
+
+      .day {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .day-label {
+        border-radius: 8px;
+        background: var(--forest);
+        color: var(--white);
+        padding: 24px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        font-size: 28px;
+        font-weight: 950;
+        text-transform: uppercase;
+      }
+
+      .modules {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .module {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 22px;
+      }
+
+      .module b {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .module h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        line-height: 1.22;
+      }
+
+      .bonus {
+        background: #f0ffe8;
+      }
+
+      .bonus .card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .value {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        background: var(--gold);
+        color: #422b00;
+        font-size: 13px;
+        font-weight: 950;
+      }
+
+      .proof {
+        background: var(--white);
+      }
+
+      .proof-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 18px;
+      }
+
+      .stat {
+        padding: 26px;
+        border-radius: 8px;
+        background: var(--forest);
+        color: var(--white);
+        text-align: center;
+      }
+
+      .stat b {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--lime);
+        font-size: 38px;
+      }
+
+      .register {
+        background:
+          linear-gradient(135deg, rgba(6, 63, 45, 0.95), rgba(12, 122, 73, 0.88)),
+          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/68a5e0adf0f9c33e612e548d.png");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+      }
+
+      .register .section {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .register h2 {
+        color: var(--white);
+      }
+
+      .register p {
+        max-width: 720px;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 19px;
+        line-height: 1.6;
+      }
+
+      .form {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.96);
+        color: var(--ink);
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .form h3 {
+        margin: 0 0 16px;
+        font-size: 25px;
+      }
+
+      label {
+        display: block;
+        margin: 14px 0 7px;
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      input,
+      select {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 13px;
+        border: 1px solid rgba(9, 37, 26, 0.22);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .form-note {
+        margin: 14px 0 0;
+        color: rgba(9, 37, 26, 0.64);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .success {
+        display: none;
+        margin-top: 12px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #e6ffe8;
+        color: #14512f;
+        font-weight: 800;
+      }
+
+      .faq details {
+        border-bottom: 1px solid var(--line);
+        padding: 20px 0;
+      }
+
+      .faq summary {
+        cursor: pointer;
+        font-size: 19px;
+        font-weight: 900;
+      }
+
+      .faq p {
+        margin: 12px 0 0;
+        color: rgba(9, 37, 26, 0.76);
+        line-height: 1.55;
+      }
+
+      footer {
+        background: #031b13;
+        color: rgba(255, 255, 255, 0.72);
+        text-align: center;
+        padding: 28px 16px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 900px) {
+        .nav {
+          display: none;
+        }
+
+        .hero-inner,
+        .quote-band .section,
+        .register .section {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding-top: 52px;
+        }
+
+        .grid.three,
+        .grid.two,
+        .modules,
+        .proof-row {
+          grid-template-columns: 1fr;
+        }
+
+        .day {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-band .section {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .portrait {
+          min-height: 360px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .topbar-inner {
+          width: min(100% - 24px, 1120px);
+        }
+
+        .brand {
+          font-size: 14px;
+        }
+
+        .topbar .button {
+          min-height: 42px;
+          padding: 0 14px;
+          font-size: 12px;
+        }
+
+        .hero-inner,
+        .section {
+          width: min(100% - 24px, 1120px);
+        }
+
+        .hero-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .card,
+        .module,
+        .form {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">Huynh Tien <span>Phat</span></div>
+        <nav class="nav" aria-label="Dieu huong">
+          <a href="#danh-cho-ai">Dành cho ai</a>
+          <a href="#lo-trinh">Lộ trình</a>
+          <a href="#qua-tang">Quà tặng</a>
+          <a href="#dang-ky">Đăng ký</a>
+        </nav>
+        <a class="button" href="#dang-ky">Giữ chỗ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="eyebrow">Thử thách trực tiếp 2 ngày - miễn phí</div>
+            <h1>Xây dựng doanh nghiệp số tinh gọn để mở ra <strong>cơ hội thứ 2</strong></h1>
+            <p class="hero-sub">
+              Dành cho chuyên gia, người có sự nghiệp và chủ doanh nghiệp nhỏ muốn biến chuyên môn,
+              kinh nghiệm thành tài sản riêng với mô hình 1 người - 1 laptop - 1 hệ thống.
+            </p>
+            <ul class="hero-list">
+              <li>Không cần bỏ công việc hiện tại, không cần đội ngũ cồng kềnh.</li>
+              <li>Không cần giỏi công nghệ, chỉ cần có chuyên môn thật và sẵn sàng bắt đầu.</li>
+              <li>Trong 2 ngày, bạn nắm khung xây nền tảng số, phễu nội dung và hệ thống chuyển đổi.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="button" href="#dang-ky">Tham gia thử thách ngay</a>
+              <div class="scarcity">Chỉ nhận 7 người để Phát kèm sát từng người</div>
+            </div>
+          </div>
+
+          <aside class="video-card" aria-label="Video gioi thieu">
+            <div class="video-frame">
+              <div class="play" aria-hidden="true">▶</div>
+            </div>
+            <div class="video-caption">
+              <b>Xem nhanh trước khi đăng ký</b>
+              <p>
+                Vì sao người giỏi chuyên môn cần một hệ thống số, không chỉ một tài khoản mạng xã hội?
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section tight pain" id="danh-cho-ai">
+        <div class="section-title">
+          <span class="label">Thử thách này dành cho bạn nếu...</span>
+          <h2>Bạn giỏi, nhưng chưa có một hệ thống giúp chuyên môn tạo dòng tiền bền hơn</h2>
+          <p>
+            Trang mẫu của Phát đánh mạnh vào cảm giác mắc kẹt. Bản này giữ đúng tinh thần đó nhưng nói rõ hơn cho nhóm chuyên gia và chủ doanh nghiệp nhỏ.
+          </p>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <h3>Bạn có chuyên môn nhưng bán hàng còn phụ thuộc may mắn</h3>
+            <p>Nội dung đăng rời rạc, khách đến không đều, mỗi lần muốn bán lại phải bắt đầu từ đầu.</p>
+          </article>
+          <article class="card">
+            <h3>Bạn thấy AI thay đổi cuộc chơi nhưng chưa biết bắt đầu ở đâu</h3>
+            <p>Bạn không muốn bị tụt lại, nhưng càng tìm hiểu càng thấy nhiều công cụ, nhiều hướng và dễ rối.</p>
+          </article>
+          <article class="card">
+            <h3>Bạn muốn nguồn thu thứ hai bên cạnh sự nghiệp hiện tại</h3>
+            <p>Không phải nghỉ việc để lao vào kinh doanh, mà xây một tài sản số nhỏ, gọn và có thể mở rộng.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <div class="section">
+          <div class="portrait" role="img" aria-label="Huynh Tien Phat"></div>
+          <div class="letter">
+            <span class="label">Tin nhắn từ Huỳnh Tiến Phát</span>
+            <h2>“Bạn không cần làm nhiều hơn. Bạn cần một mô hình tốt hơn.”</h2>
+            <p>
+              Tôi đồng hành cùng người có chuyên môn chuyển kinh nghiệm của mình thành một hệ thống kinh doanh số tinh gọn. Không phải để chạy theo công nghệ, mà để có thêm quyền chủ động với thời gian, thu nhập và tương lai.
+            </p>
+            <p>
+              Trong thử thách này, tôi sẽ chỉ cho bạn cách đi từ <span class="highlight">chuyên môn</span> đến <span class="highlight">nội dung</span>, từ nội dung đến <span class="highlight">khách hàng tiềm năng</span>, và từ đó đến một hệ thống có thể vận hành lặp lại.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="section">
+          <h2>Nếu bạn còn đang đọc đến đây, khả năng cao đây là lúc nên dựng hệ thống đầu tiên.</h2>
+          <a class="button dark" href="#dang-ky">Giữ 1 trong 7 suất</a>
+        </div>
+      </section>
+
+      <section class="section" id="lo-trinh">
+        <div class="section-title">
+          <span class="label">Bạn sẽ làm gì trong 2 ngày?</span>
+          <h2>Không chỉ nghe lý thuyết. Bạn dựng nền móng có thể dùng ngay.</h2>
+        </div>
+        <div class="timeline">
+          <div class="day">
+            <div class="day-label">Ngày 1</div>
+            <div class="modules">
+              <article class="module">
+                <b>#1 - Định vị</b>
+                <h3>Làm rõ chuyên môn có thể chuyển thành sản phẩm số</h3>
+                <p>Chọn đúng nhóm khách hàng, nỗi đau, kết quả hứa hẹn và lý do họ cần bạn.</p>
+              </article>
+              <article class="module">
+                <b>#2 - Nội dung</b>
+                <h3>Xây trụ cột nội dung thu hút khách hàng tiềm năng</h3>
+                <p>Biến kinh nghiệm thật thành bài viết, video ngắn, câu chuyện và lời mời phù hợp.</p>
+              </article>
+              <article class="module">
+                <b>#3 - Phễu</b>
+                <h3>Thiết kế hành trình từ người lạ thành người quan tâm</h3>
+                <p>Có cấu trúc landing page, CTA, quà tặng và kịch bản chăm sóc cơ bản.</p>
+              </article>
+            </div>
+          </div>
+          <div class="day">
+            <div class="day-label">Ngày 2</div>
+            <div class="modules">
+              <article class="module">
+                <b>#4 - Hệ thống</b>
+                <h3>Gom công cụ thành quy trình 1 người vận hành được</h3>
+                <p>Sắp xếp AI, biểu mẫu, nội dung và lịch chăm sóc để không bị rối khi triển khai.</p>
+              </article>
+              <article class="module">
+                <b>#5 - Chuyển đổi</b>
+                <h3>Viết lời mời và khung tư vấn giúp khách ra quyết định</h3>
+                <p>Không chèo kéo. Tập trung vào vấn đề thật, kết quả thật và lời đề nghị rõ ràng.</p>
+              </article>
+              <article class="module">
+                <b>#6 - Kế hoạch</b>
+                <h3>Lên bản đồ hành động 30 ngày sau thử thách</h3>
+                <p>Biết việc gì làm trước, việc gì tự động hóa sau và cách đo tín hiệu thị trường.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bonus" id="qua-tang">
+        <div class="section">
+          <div class="section-title">
+            <span class="label">Quà tặng khi tham gia</span>
+            <h2>Bộ công cụ giúp bạn không phải bắt đầu từ trang trắng</h2>
+            <p>Giữ cảm giác “quà tặng khổng lồ” của trang mẫu, nhưng diễn đạt gọn và đúng trọng tâm hơn.</p>
+          </div>
+          <div class="grid three">
+            <article class="card">
+              <span class="value">Trị giá 10.868.000đ</span>
+              <h3>365 ý tưởng nội dung xây thương hiệu cá nhân</h3>
+              <p>Dùng để đăng đều, tránh bí ý tưởng và xây nhận diện chuyên gia theo từng chủ đề.</p>
+            </article>
+            <article class="card">
+              <span class="value">Trị giá 12.868.000đ</span>
+              <h3>Khung landing page chuyển đổi cho chuyên gia</h3>
+              <p>Cấu trúc hero, nỗi đau, lời hứa, lộ trình, quà tặng và CTA để triển khai nhanh.</p>
+            </article>
+            <article class="card">
+              <span class="value">Trị giá 19.868.000đ</span>
+              <h3>Bản đồ hệ thống doanh nghiệp số tinh gọn</h3>
+              <p>Một trang nhìn toàn bộ: khách hàng, sản phẩm, nội dung, phễu, chăm sóc và đo lường.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof">
+        <div class="section-title">
+          <span class="label">Điểm khác biệt</span>
+          <h2>Không bán giấc mơ. Bắt đầu từ hệ thống nhỏ đủ chạy.</h2>
+        </div>
+        <div class="proof-row">
+          <div class="stat"><b>2 ngày</b> để nắm khung và dựng nền móng đầu tiên</div>
+          <div class="stat"><b>7 người</b> để giữ không gian kèm sát và sửa trực tiếp</div>
+          <div class="stat"><b>30 ngày</b> kế hoạch hành động sau thử thách</div>
+        </div>
+      </section>
+
+      <section class="register" id="dang-ky">
+        <div class="section">
+          <div>
+            <span class="eyebrow">Đăng ký giữ chỗ</span>
+            <h2>Tham gia thử thách 2 ngày xây dựng doanh nghiệp số tinh gọn</h2>
+            <p>
+              Điền thông tin để Phát lọc đúng người phù hợp. Ưu tiên người đã có chuyên môn, kinh nghiệm thật và muốn xây thêm một hướng đi số bên cạnh công việc hiện tại.
+            </p>
+            <ul class="hero-list">
+              <li>Miễn phí tham gia thử thách.</li>
+              <li>Chỉ nhận 7 người trong đợt này.</li>
+              <li>Phù hợp nếu bạn nghiêm túc muốn xây tài sản riêng bằng AI và đòn bẩy số.</li>
+            </ul>
+          </div>
+          <form class="form" id="leadForm">
+            <h3>Giữ chỗ của bạn</h3>
+            <label for="name">Họ và tên</label>
+            <input id="name" name="name" autocomplete="name" required placeholder="Nhập tên của bạn" />
+
+            <label for="phone">Số điện thoại / Zalo</label>
+            <input id="phone" name="phone" inputmode="tel" required placeholder="Nhập số liên hệ" />
+
+            <label for="role">Bạn đang ở nhóm nào?</label>
+            <select id="role" name="role" required>
+              <option value="">Chọn một nhóm phù hợp</option>
+              <option>Chuyên gia / người có chuyên môn</option>
+              <option>Coach / trainer / tư vấn</option>
+              <option>Chủ doanh nghiệp nhỏ</option>
+              <option>Người có sự nghiệp muốn xây cơ hội thứ 2</option>
+            </select>
+
+            <label for="goal">Mục tiêu gần nhất của bạn</label>
+            <input id="goal" name="goal" placeholder="Ví dụ: có khách đều hơn, có sản phẩm số đầu tiên..." />
+
+            <button class="button full" type="submit">Đăng ký thử thách ngay</button>
+            <div class="success" id="successMessage">Đã ghi nhận thông tin. Phát có thể nối form này với Zalo/CRM khi dùng thật.</div>
+            <p class="form-note">Bản demo hiện lưu thông tin trên trình duyệt để xem trải nghiệm. Khi chạy thật có thể nối Google Sheet, CRM hoặc Zalo OA.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="section-title">
+          <span class="label">Câu hỏi thường gặp</span>
+          <h2>Trước khi bạn giữ chỗ</h2>
+        </div>
+        <details open>
+          <summary>Tôi không giỏi công nghệ có tham gia được không?</summary>
+          <p>Được. Thử thách tập trung vào mô hình, tư duy hệ thống và các bước triển khai đơn giản bằng công cụ có sẵn.</p>
+        </details>
+        <details>
+          <summary>Tôi chưa có sản phẩm số thì sao?</summary>
+          <p>Vẫn phù hợp nếu bạn có chuyên môn hoặc kinh nghiệm thật. Một phần của thử thách là làm rõ thứ có thể đóng gói thành sản phẩm hoặc dịch vụ số.</p>
+        </details>
+        <details>
+          <summary>Vì sao chỉ nhận 7 người?</summary>
+          <p>Vì mô hình này cần sửa trực tiếp theo từng người: chuyên môn khác nhau, khách hàng khác nhau, lời mời khác nhau.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Huỳnh Tiến Phát. Landing page demo cho thử thách doanh nghiệp số tinh gọn.
+    </footer>
+
+    <script>
+      const form = document.querySelector("#leadForm");
+      const success = document.querySelector("#successMessage");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        const leads = JSON.parse(localStorage.getItem("phatLandingLeads") || "[]");
+        leads.push({ ...data, createdAt: new Date().toISOString() });
+        localStorage.setItem("phatLandingLeads", JSON.stringify(leads));
+        success.style.display = "block";
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
