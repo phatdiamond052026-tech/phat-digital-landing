@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chúc mừng - Đăng ký thành công</title>
+    <meta name="description" content="Bạn đã đăng ký thành công thử thách Doanh nghiệp số tinh gọn." />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #fff;
+        color: #050505;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 70px;
+        text-align: center;
+      }
+
+      h1 {
+        display: inline-block;
+        margin: 0 0 24px;
+        border-bottom: 8px solid #000;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(66px, 9vw, 124px);
+        line-height: 0.95;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0 auto 28px;
+        max-width: 1000px;
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.32;
+      }
+
+      strong {
+        font-weight: 900;
+      }
+
+      .blue-text {
+        color: #248df0;
+        font-weight: 900;
+      }
+
+      .small {
+        margin-top: 8px;
+        font-size: clamp(22px, 3vw, 31px);
+      }
+
+      .zalo-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: min(840px, 100%);
+        min-height: 112px;
+        margin: 0 auto 26px;
+        border-radius: 5px;
+        background: #248df0;
+        color: #fff;
+        font-size: clamp(31px, 5vw, 52px);
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .qr {
+        width: min(660px, 96%);
+        margin: 0 auto;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          width: min(100% - 20px, 1120px);
+          padding-top: 28px;
+        }
+
+        h1 {
+          border-bottom-width: 5px;
+        }
+
+        .zalo-button {
+          min-height: 86px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Chúc mừng!</h1>
+      <p>
+        Bạn đã đăng ký thành công, Chúng tôi sẽ gửi toàn bộ lịch học, thông tin quà tặng, tài liệu...
+        cho bạn vào trong <strong>một nhóm zalo duy nhất</strong>
+      </p>
+      <p>
+        <strong>Bước cuối cùng:</strong> Để được vào nhóm ZALO lớp học ngay bây giờ; Bạn bấm
+        <span class="blue-text">nút màu xanh</span> bên dưới, hoặc quét mã <strong>QR-code</strong>
+      </p>
+      <p class="small">(Nhanh tay chúng tôi chỉ duyệt thành viên trong 3 phút kể từ bây giờ)</p>
+      <a class="zalo-button" href="https://zalo.me/g/nrbg64gvrx2nrh7zh3z7" target="_blank" rel="noopener">
+        Bấm đây để vào nhóm Zalo
+      </a>
+      <img class="qr" src="assets/zalo-qr.jpg" alt="QR code vào nhóm Zalo Cơ hội thứ 2" />
+    </main>
+  </body>
+</html>

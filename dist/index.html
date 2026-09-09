@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Huynh Tien Phat - Thu thach doanh nghiep so tinh gon</title>
+    <title>Thử thách 2 ngày - Doanh nghiệp số tinh gọn</title>
     <meta
       name="description"
-      content="Thu thach 2 ngay giup chuyen gia, nguoi co su nghiep va chu doanh nghiep nho bien chuyen mon thanh doanh nghiep so tinh gon."
+      content="Thử thách 2 ngày miễn phí giúp chuyên gia, người có sự nghiệp và chủ doanh nghiệp nhỏ xây doanh nghiệp số tinh gọn với mô hình 1 người - 1 laptop - 1 hệ thống."
     />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap");
+
       :root {
-        --ink: #09251a;
-        --forest: #063f2d;
-        --green: #0c7a49;
-        --lime: #baf24a;
-        --mint: #ecfff2;
-        --soft: #f7fff4;
-        --line: rgba(9, 37, 26, 0.16);
-        --white: #ffffff;
-        --gold: #ffd966;
-        --danger: #e43d30;
-        --shadow: 0 22px 60px rgba(6, 63, 45, 0.18);
+        --green: #078424;
+        --green-dark: #045e18;
+        --green-soft: #e8ffd5;
+        --blue: #248df0;
+        --red: #f00000;
+        --ink: #070707;
+        --muted: #6d6d6d;
+        --paper: #ffffff;
+        --side: #f1f1f1;
+        --line: #d7d7d7;
+        --yellow: #fff2a0;
       }
 
       * {
@@ -33,923 +35,726 @@
 
       body {
         margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--side);
         color: var(--ink);
-        background: var(--soft);
+        font-family: Inter, Arial, sans-serif;
       }
 
       img {
-        max-width: 100%;
         display: block;
+        max-width: 100%;
       }
 
       a {
         color: inherit;
       }
 
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        background: rgba(6, 63, 45, 0.94);
-        color: var(--white);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        backdrop-filter: blur(16px);
+      .top-line {
+        height: 8px;
+        background: #9c0000;
       }
 
-      .topbar-inner {
-        width: min(1120px, calc(100% - 32px));
-        min-height: 64px;
+      .page {
+        width: min(980px, 100%);
         margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-
-      .brand {
-        font-weight: 900;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      .brand span {
-        color: var(--lime);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        font-size: 14px;
-        font-weight: 700;
-      }
-
-      .nav a {
-        text-decoration: none;
-        opacity: 0.9;
-      }
-
-      .nav a:hover {
-        opacity: 1;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 50px;
-        padding: 0 22px;
-        border: 0;
-        border-radius: 8px;
-        background: var(--lime);
-        color: #062416;
-        box-shadow: 0 12px 26px rgba(186, 242, 74, 0.28);
-        font-weight: 950;
-        text-decoration: none;
-        text-transform: uppercase;
-        cursor: pointer;
-      }
-
-      .button.dark {
-        background: var(--forest);
-        color: var(--white);
-        box-shadow: 0 12px 26px rgba(6, 63, 45, 0.18);
-      }
-
-      .button.full {
-        width: 100%;
-      }
-
-      .hero {
-        position: relative;
-        overflow: hidden;
-        background:
-          linear-gradient(135deg, rgba(6, 63, 45, 0.96), rgba(4, 91, 54, 0.9)),
-          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/6aa037e9bfc1456f8c670083.png");
-        background-size: cover;
-        background-position: center;
-        color: var(--white);
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: auto 0 0;
-        height: 150px;
-        background: linear-gradient(0deg, var(--soft), rgba(247, 255, 244, 0));
-      }
-
-      .hero-inner {
-        position: relative;
-        z-index: 1;
-        width: min(1120px, calc(100% - 32px));
-        min-height: calc(100vh - 64px);
-        margin: 0 auto;
-        padding: 76px 0 96px;
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        align-items: center;
-        gap: 44px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-        padding: 9px 12px;
-        border: 1px solid rgba(255, 255, 255, 0.26);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        color: var(--lime);
-        font-size: 13px;
-        font-weight: 900;
-        text-transform: uppercase;
-      }
-
-      .hero h1 {
-        margin: 0;
-        max-width: 760px;
-        font-size: clamp(42px, 6vw, 78px);
-        line-height: 0.94;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-
-      .hero h1 strong {
-        color: var(--lime);
-      }
-
-      .hero-sub {
-        max-width: 650px;
-        margin: 24px 0 0;
-        font-size: clamp(18px, 2vw, 23px);
-        line-height: 1.45;
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 650;
-      }
-
-      .hero-list {
-        display: grid;
-        gap: 12px;
-        margin: 28px 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .hero-list li,
-      .check-list li {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        font-size: 17px;
-        line-height: 1.45;
-      }
-
-      .hero-list li::before,
-      .check-list li::before {
-        content: "✓";
-        flex: 0 0 24px;
-        width: 24px;
-        height: 24px;
-        display: inline-grid;
-        place-items: center;
-        border-radius: 6px;
-        background: var(--lime);
-        color: #0a2a1d;
-        font-weight: 950;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .scarcity {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 14px;
-        font-weight: 800;
-      }
-
-      .video-card {
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .video-frame {
-        aspect-ratio: 16 / 10;
-        display: grid;
-        place-items: center;
-        background:
-          linear-gradient(180deg, rgba(9, 37, 26, 0.1), rgba(9, 37, 26, 0.72)),
-          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/69e6357b6da81710dbef4758.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-
-      .play {
-        width: 78px;
-        height: 78px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: var(--lime);
-        color: var(--forest);
-        font-size: 28px;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-      }
-
-      .video-caption {
-        padding: 22px;
-        background: var(--white);
-        color: var(--ink);
-      }
-
-      .video-caption b {
-        display: block;
-        margin-bottom: 8px;
-        font-size: 20px;
+        background: var(--paper);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
       }
 
       .section {
-        width: min(1120px, calc(100% - 32px));
+        width: min(860px, calc(100% - 28px));
         margin: 0 auto;
-        padding: 76px 0;
+        padding: 28px 0;
       }
 
-      .section.tight {
-        padding-top: 30px;
-      }
-
-      .section-title {
-        max-width: 860px;
-        margin: 0 auto 36px;
+      .hero {
+        padding-top: 34px;
         text-align: center;
       }
 
-      .section-title .label {
-        display: inline-block;
-        margin-bottom: 14px;
-        color: var(--green);
-        font-size: 13px;
-        font-weight: 950;
-        text-transform: uppercase;
-      }
-
-      h2 {
+      .headline,
+      .impact-title,
+      .big-title {
         margin: 0;
-        font-size: clamp(32px, 4.5vw, 54px);
-        line-height: 1.02;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-weight: 900;
         letter-spacing: 0;
         text-transform: uppercase;
       }
 
-      .section-title p {
-        margin: 18px auto 0;
-        max-width: 760px;
-        font-size: 18px;
-        line-height: 1.55;
-        color: rgba(9, 37, 26, 0.78);
+      .headline {
+        font-size: clamp(32px, 5.6vw, 55px);
+        line-height: 1.1;
       }
 
-      .grid {
-        display: grid;
-        gap: 18px;
-      }
-
-      .grid.three {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .grid.two {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .card {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
-        padding: 26px;
-        box-shadow: 0 12px 30px rgba(6, 63, 45, 0.07);
-      }
-
-      .card h3 {
-        margin: 0 0 12px;
-        font-size: 22px;
-        line-height: 1.2;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 16px;
-        line-height: 1.55;
-        color: rgba(9, 37, 26, 0.75);
-      }
-
-      .pain .card {
-        border-left: 7px solid var(--green);
-      }
-
-      .quote-band {
-        background: var(--forest);
-        color: var(--white);
-      }
-
-      .quote-band .section {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 40px;
-        align-items: center;
-      }
-
-      .portrait {
-        min-height: 440px;
-        border-radius: 8px;
-        background:
-          linear-gradient(180deg, rgba(6, 63, 45, 0), rgba(6, 63, 45, 0.3)),
-          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/6aa037e9641597c752b0cd3a.png");
-        background-size: cover;
-        background-position: center;
-        box-shadow: var(--shadow);
-      }
-
-      .letter .label {
-        color: var(--lime);
-      }
-
-      .letter h2 {
-        color: var(--white);
-      }
-
-      .letter p {
-        margin: 18px 0 0;
-        font-size: 19px;
-        line-height: 1.62;
-        color: rgba(255, 255, 255, 0.84);
-      }
-
-      .highlight {
-        color: var(--lime);
+      .subheadline {
+        margin: 4px auto 28px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(24px, 4.4vw, 42px);
+        line-height: 1.12;
         font-weight: 900;
       }
 
-      .cta-band {
-        background: linear-gradient(135deg, var(--lime), #f2ffb3);
-        color: #082517;
+      .red {
+        color: var(--red);
       }
 
-      .cta-band .section {
-        padding: 42px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 26px;
-      }
-
-      .cta-band h2 {
-        max-width: 760px;
-        font-size: clamp(28px, 3vw, 42px);
-      }
-
-      .timeline {
-        display: grid;
-        gap: 18px;
-      }
-
-      .day {
-        display: grid;
-        grid-template-columns: 160px 1fr;
-        gap: 18px;
-        align-items: stretch;
-      }
-
-      .day-label {
-        border-radius: 8px;
-        background: var(--forest);
-        color: var(--white);
-        padding: 24px;
-        text-align: center;
-        display: grid;
-        place-items: center;
-        font-size: 28px;
-        font-weight: 950;
-        text-transform: uppercase;
-      }
-
-      .modules {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
-      }
-
-      .module {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--white);
-        padding: 22px;
-      }
-
-      .module b {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--green);
-        font-size: 14px;
-        text-transform: uppercase;
-      }
-
-      .module h3 {
-        margin: 0 0 10px;
-        font-size: 20px;
-        line-height: 1.22;
-      }
-
-      .bonus {
-        background: #f0ffe8;
-      }
-
-      .bonus .card {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .value {
-        display: inline-block;
-        margin-bottom: 14px;
-        padding: 7px 10px;
-        border-radius: 8px;
-        background: var(--gold);
-        color: #422b00;
-        font-size: 13px;
-        font-weight: 950;
-      }
-
-      .proof {
-        background: var(--white);
-      }
-
-      .proof-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 18px;
-      }
-
-      .stat {
-        padding: 26px;
-        border-radius: 8px;
-        background: var(--forest);
-        color: var(--white);
-        text-align: center;
-      }
-
-      .stat b {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--lime);
-        font-size: 38px;
-      }
-
-      .register {
-        background:
-          linear-gradient(135deg, rgba(6, 63, 45, 0.95), rgba(12, 122, 73, 0.88)),
-          url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https%3A//assets.cdn.filesafe.space/qk57FbeBWAqyfrq1e8sx/media/68a5e0adf0f9c33e612e548d.png");
-        background-size: cover;
-        background-position: center;
-        color: var(--white);
-      }
-
-      .register .section {
-        display: grid;
-        grid-template-columns: 1fr 420px;
-        gap: 36px;
-        align-items: center;
-      }
-
-      .register h2 {
-        color: var(--white);
-      }
-
-      .register p {
-        max-width: 720px;
-        color: rgba(255, 255, 255, 0.84);
-        font-size: 19px;
-        line-height: 1.6;
-      }
-
-      .form {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.96);
-        color: var(--ink);
-        padding: 24px;
-        box-shadow: var(--shadow);
-      }
-
-      .form h3 {
-        margin: 0 0 16px;
-        font-size: 25px;
-      }
-
-      label {
-        display: block;
-        margin: 14px 0 7px;
-        font-size: 14px;
-        font-weight: 850;
-      }
-
-      input,
-      select {
+      .hero-image {
         width: 100%;
-        min-height: 48px;
-        padding: 0 13px;
-        border: 1px solid rgba(9, 37, 26, 0.22);
-        border-radius: 8px;
-        background: var(--white);
-        color: var(--ink);
-        font: inherit;
+        margin: 0 auto 20px;
       }
 
-      .form-note {
-        margin: 14px 0 0;
-        color: rgba(9, 37, 26, 0.64);
-        font-size: 13px;
+      .keep-seat {
+        margin: 16px 0 10px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(24px, 4vw, 37px);
+        line-height: 1.16;
+        font-weight: 900;
+      }
+
+      .form-card {
+        width: min(760px, 100%);
+        margin: 0 auto;
+        padding: 28px clamp(18px, 5vw, 58px) 16px;
+        background: #fff;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.08);
+      }
+
+      .lead-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .lead-form input {
+        width: 100%;
+        min-height: 66px;
+        border: 1px solid #bfbfbf;
+        border-radius: 7px;
+        padding: 0 26px;
+        color: #33394a;
+        font-size: clamp(18px, 2.4vw, 25px);
+        outline: none;
+      }
+
+      .lead-form input:focus {
+        border-color: var(--green);
+        box-shadow: 0 0 0 3px rgba(7, 132, 36, 0.15);
+      }
+
+      .cta {
+        width: 100%;
+        min-height: 92px;
+        border: 0;
+        border-radius: 7px;
+        background: var(--green);
+        color: #fff;
+        cursor: pointer;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(31px, 5.2vw, 52px);
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .cta:hover {
+        background: var(--green-dark);
+      }
+
+      .cta:disabled {
+        cursor: wait;
+        opacity: 0.72;
+      }
+
+      .secure {
+        margin: 18px 0 0;
+        color: #8a8a8a;
+        font-size: clamp(18px, 2.4vw, 24px);
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .divider {
+        height: 1px;
+        margin: 0 auto;
+        background: #e8e8e8;
+        width: min(820px, calc(100% - 28px));
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .kicker {
+        margin: 0 0 8px;
+        color: var(--green);
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .impact-title {
+        margin-bottom: 14px;
+        font-size: clamp(28px, 4.4vw, 43px);
+        line-height: 1.12;
+      }
+
+      .body-copy {
+        margin: 0 auto 16px;
+        max-width: 720px;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      .body-copy strong {
+        font-weight: 900;
+      }
+
+      .mini-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        margin: 10px auto 0;
+        padding: 0 22px;
+        border: 0;
+        border-radius: 3px;
+        background: var(--green);
+        color: #fff;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .text-box {
+        padding: 18px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+      }
+
+      .text-box h3 {
+        margin: 0 0 10px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: 30px;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      .check-list {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 18px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .check-list li {
+        position: relative;
+        padding-left: 28px;
+      }
+
+      .check-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--green);
+        font-weight: 900;
+      }
+
+      .yellow-note {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 6px 10px;
+        background: var(--yellow);
+        color: #111;
+        font-size: 17px;
+        font-weight: 900;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .proof-card {
+        border: 1px solid #e2e2e2;
+        padding: 16px;
+        background: #fff;
+      }
+
+      .proof-card h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .proof-card p {
+        margin: 0;
+        color: #313131;
+        font-size: 16px;
         line-height: 1.45;
+        font-weight: 600;
       }
 
-      .success {
+      .message-strip {
+        display: grid;
+        gap: 12px;
+        width: min(640px, 100%);
+        margin: 18px auto 0;
+      }
+
+      .bubble {
+        max-width: 82%;
+        padding: 12px 16px;
+        border-radius: 15px;
+        background: #f1f1f1;
+        font-size: 16px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .bubble.right {
+        justify-self: end;
+        background: #dceaff;
+        color: #0352ad;
+      }
+
+      .speaker-band {
+        background: #393939;
+        color: #fff;
+      }
+
+      .speaker-band .section {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .speaker-band h2 {
+        margin: 0 0 12px;
+        color: #94ff80;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: 34px;
+        text-transform: uppercase;
+      }
+
+      .speaker-band p,
+      .speaker-band li {
+        color: #f4f4f4;
+      }
+
+      .offer-stack {
+        display: grid;
+        gap: 16px;
+      }
+
+      .offer {
+        display: grid;
+        grid-template-columns: 190px 1fr;
+        gap: 18px;
+        align-items: center;
+        padding: 14px;
+        border: 1px solid #e3e3e3;
+        background: #fff;
+      }
+
+      .offer img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .offer h3 {
+        margin: 0 0 8px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: 26px;
+        line-height: 1.08;
+        text-transform: uppercase;
+      }
+
+      .offer p {
+        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 650;
+      }
+
+      .final-box {
+        width: min(720px, 100%);
+        margin: 0 auto;
+        padding: 22px;
+        border: 2px solid var(--green);
+        background: linear-gradient(180deg, #fff, #f7fff2);
+        text-align: center;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
         display: none;
-        margin-top: 12px;
-        padding: 12px;
-        border-radius: 8px;
-        background: #e6ffe8;
-        color: #14512f;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        background: rgba(0, 0, 0, 0.72);
+      }
+
+      .modal.open {
+        display: flex;
+      }
+
+      .modal-box {
+        position: relative;
+        width: min(720px, 100%);
+        max-height: 92vh;
+        overflow: auto;
+        border-radius: 5px;
+        background: #fff;
+        padding: 30px clamp(18px, 5vw, 48px) 22px;
+        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.36);
+        text-align: center;
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 50%;
+        background: #111;
+        color: #fff;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      .modal-title {
+        margin: 0 0 12px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(28px, 5vw, 46px);
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      .modal-sub {
+        margin: 0 0 18px;
+        font-size: 18px;
+        line-height: 1.45;
         font-weight: 800;
       }
 
-      .faq details {
-        border-bottom: 1px solid var(--line);
-        padding: 20px 0;
+      .modal .cta {
+        min-height: 78px;
+        font-size: clamp(27px, 4.6vw, 42px);
       }
 
-      .faq summary {
-        cursor: pointer;
-        font-size: 19px;
-        font-weight: 900;
-      }
-
-      .faq p {
-        margin: 12px 0 0;
-        color: rgba(9, 37, 26, 0.76);
-        line-height: 1.55;
-      }
-
-      footer {
-        background: #031b13;
-        color: rgba(255, 255, 255, 0.72);
-        text-align: center;
-        padding: 28px 16px;
+      .form-status {
+        min-height: 22px;
+        margin: 8px 0 0;
+        color: var(--green-dark);
         font-size: 14px;
+        font-weight: 800;
       }
 
-      @media (max-width: 900px) {
-        .nav {
-          display: none;
-        }
-
-        .hero-inner,
-        .quote-band .section,
-        .register .section {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-inner {
-          padding-top: 52px;
-        }
-
-        .grid.three,
-        .grid.two,
-        .modules,
-        .proof-row {
-          grid-template-columns: 1fr;
-        }
-
-        .day {
-          grid-template-columns: 1fr;
-        }
-
-        .cta-band .section {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .portrait {
-          min-height: 360px;
-        }
-      }
-
-      @media (max-width: 560px) {
-        .topbar-inner {
-          width: min(100% - 24px, 1120px);
-        }
-
-        .brand {
-          font-size: 14px;
-        }
-
-        .topbar .button {
-          min-height: 42px;
-          padding: 0 14px;
-          font-size: 12px;
-        }
-
-        .hero-inner,
+      @media (max-width: 760px) {
         .section {
-          width: min(100% - 24px, 1120px);
+          width: min(100% - 20px, 860px);
+          padding: 22px 0;
         }
 
-        .hero-actions {
-          align-items: stretch;
-          flex-direction: column;
+        .hero {
+          padding-top: 22px;
         }
 
-        .button {
-          width: 100%;
+        .two-col,
+        .speaker-band .section,
+        .offer {
+          grid-template-columns: 1fr;
         }
 
-        .card,
-        .module,
-        .form {
-          padding: 20px;
+        .form-card {
+          padding-inline: 14px;
+        }
+
+        .lead-form input {
+          min-height: 58px;
+          padding-inline: 16px;
+        }
+
+        .cta {
+          min-height: 78px;
+        }
+
+        .proof-grid {
+          grid-template-columns: 1fr;
         }
       }
     </style>
   </head>
   <body>
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="brand">Huynh Tien <span>Phat</span></div>
-        <nav class="nav" aria-label="Dieu huong">
-          <a href="#danh-cho-ai">Dành cho ai</a>
-          <a href="#lo-trinh">Lộ trình</a>
-          <a href="#qua-tang">Quà tặng</a>
-          <a href="#dang-ky">Đăng ký</a>
-        </nav>
-        <a class="button" href="#dang-ky">Giữ chỗ</a>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-inner">
-          <div>
-            <div class="eyebrow">Thử thách trực tiếp 2 ngày - miễn phí</div>
-            <h1>Xây dựng doanh nghiệp số tinh gọn để mở ra <strong>cơ hội thứ 2</strong></h1>
-            <p class="hero-sub">
-              Dành cho chuyên gia, người có sự nghiệp và chủ doanh nghiệp nhỏ muốn biến chuyên môn,
-              kinh nghiệm thành tài sản riêng với mô hình 1 người - 1 laptop - 1 hệ thống.
-            </p>
-            <ul class="hero-list">
-              <li>Không cần bỏ công việc hiện tại, không cần đội ngũ cồng kềnh.</li>
-              <li>Không cần giỏi công nghệ, chỉ cần có chuyên môn thật và sẵn sàng bắt đầu.</li>
-              <li>Trong 2 ngày, bạn nắm khung xây nền tảng số, phễu nội dung và hệ thống chuyển đổi.</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="button" href="#dang-ky">Tham gia thử thách ngay</a>
-              <div class="scarcity">Chỉ nhận 7 người để Phát kèm sát từng người</div>
-            </div>
-          </div>
-
-          <aside class="video-card" aria-label="Video gioi thieu">
-            <div class="video-frame">
-              <div class="play" aria-hidden="true">▶</div>
-            </div>
-            <div class="video-caption">
-              <b>Xem nhanh trước khi đăng ký</b>
-              <p>
-                Vì sao người giỏi chuyên môn cần một hệ thống số, không chỉ một tài khoản mạng xã hội?
-              </p>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section tight pain" id="danh-cho-ai">
-        <div class="section-title">
-          <span class="label">Thử thách này dành cho bạn nếu...</span>
-          <h2>Bạn giỏi, nhưng chưa có một hệ thống giúp chuyên môn tạo dòng tiền bền hơn</h2>
-          <p>
-            Trang mẫu của Phát đánh mạnh vào cảm giác mắc kẹt. Bản này giữ đúng tinh thần đó nhưng nói rõ hơn cho nhóm chuyên gia và chủ doanh nghiệp nhỏ.
-          </p>
-        </div>
-        <div class="grid three">
-          <article class="card">
-            <h3>Bạn có chuyên môn nhưng bán hàng còn phụ thuộc may mắn</h3>
-            <p>Nội dung đăng rời rạc, khách đến không đều, mỗi lần muốn bán lại phải bắt đầu từ đầu.</p>
-          </article>
-          <article class="card">
-            <h3>Bạn thấy AI thay đổi cuộc chơi nhưng chưa biết bắt đầu ở đâu</h3>
-            <p>Bạn không muốn bị tụt lại, nhưng càng tìm hiểu càng thấy nhiều công cụ, nhiều hướng và dễ rối.</p>
-          </article>
-          <article class="card">
-            <h3>Bạn muốn nguồn thu thứ hai bên cạnh sự nghiệp hiện tại</h3>
-            <p>Không phải nghỉ việc để lao vào kinh doanh, mà xây một tài sản số nhỏ, gọn và có thể mở rộng.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="quote-band">
-        <div class="section">
-          <div class="portrait" role="img" aria-label="Huynh Tien Phat"></div>
-          <div class="letter">
-            <span class="label">Tin nhắn từ Huỳnh Tiến Phát</span>
-            <h2>“Bạn không cần làm nhiều hơn. Bạn cần một mô hình tốt hơn.”</h2>
-            <p>
-              Tôi đồng hành cùng người có chuyên môn chuyển kinh nghiệm của mình thành một hệ thống kinh doanh số tinh gọn. Không phải để chạy theo công nghệ, mà để có thêm quyền chủ động với thời gian, thu nhập và tương lai.
-            </p>
-            <p>
-              Trong thử thách này, tôi sẽ chỉ cho bạn cách đi từ <span class="highlight">chuyên môn</span> đến <span class="highlight">nội dung</span>, từ nội dung đến <span class="highlight">khách hàng tiềm năng</span>, và từ đó đến một hệ thống có thể vận hành lặp lại.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-band">
-        <div class="section">
-          <h2>Nếu bạn còn đang đọc đến đây, khả năng cao đây là lúc nên dựng hệ thống đầu tiên.</h2>
-          <a class="button dark" href="#dang-ky">Giữ 1 trong 7 suất</a>
-        </div>
-      </section>
-
-      <section class="section" id="lo-trinh">
-        <div class="section-title">
-          <span class="label">Bạn sẽ làm gì trong 2 ngày?</span>
-          <h2>Không chỉ nghe lý thuyết. Bạn dựng nền móng có thể dùng ngay.</h2>
-        </div>
-        <div class="timeline">
-          <div class="day">
-            <div class="day-label">Ngày 1</div>
-            <div class="modules">
-              <article class="module">
-                <b>#1 - Định vị</b>
-                <h3>Làm rõ chuyên môn có thể chuyển thành sản phẩm số</h3>
-                <p>Chọn đúng nhóm khách hàng, nỗi đau, kết quả hứa hẹn và lý do họ cần bạn.</p>
-              </article>
-              <article class="module">
-                <b>#2 - Nội dung</b>
-                <h3>Xây trụ cột nội dung thu hút khách hàng tiềm năng</h3>
-                <p>Biến kinh nghiệm thật thành bài viết, video ngắn, câu chuyện và lời mời phù hợp.</p>
-              </article>
-              <article class="module">
-                <b>#3 - Phễu</b>
-                <h3>Thiết kế hành trình từ người lạ thành người quan tâm</h3>
-                <p>Có cấu trúc landing page, CTA, quà tặng và kịch bản chăm sóc cơ bản.</p>
-              </article>
-            </div>
-          </div>
-          <div class="day">
-            <div class="day-label">Ngày 2</div>
-            <div class="modules">
-              <article class="module">
-                <b>#4 - Hệ thống</b>
-                <h3>Gom công cụ thành quy trình 1 người vận hành được</h3>
-                <p>Sắp xếp AI, biểu mẫu, nội dung và lịch chăm sóc để không bị rối khi triển khai.</p>
-              </article>
-              <article class="module">
-                <b>#5 - Chuyển đổi</b>
-                <h3>Viết lời mời và khung tư vấn giúp khách ra quyết định</h3>
-                <p>Không chèo kéo. Tập trung vào vấn đề thật, kết quả thật và lời đề nghị rõ ràng.</p>
-              </article>
-              <article class="module">
-                <b>#6 - Kế hoạch</b>
-                <h3>Lên bản đồ hành động 30 ngày sau thử thách</h3>
-                <p>Biết việc gì làm trước, việc gì tự động hóa sau và cách đo tín hiệu thị trường.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bonus" id="qua-tang">
-        <div class="section">
-          <div class="section-title">
-            <span class="label">Quà tặng khi tham gia</span>
-            <h2>Bộ công cụ giúp bạn không phải bắt đầu từ trang trắng</h2>
-            <p>Giữ cảm giác “quà tặng khổng lồ” của trang mẫu, nhưng diễn đạt gọn và đúng trọng tâm hơn.</p>
-          </div>
-          <div class="grid three">
-            <article class="card">
-              <span class="value">Trị giá 10.868.000đ</span>
-              <h3>365 ý tưởng nội dung xây thương hiệu cá nhân</h3>
-              <p>Dùng để đăng đều, tránh bí ý tưởng và xây nhận diện chuyên gia theo từng chủ đề.</p>
-            </article>
-            <article class="card">
-              <span class="value">Trị giá 12.868.000đ</span>
-              <h3>Khung landing page chuyển đổi cho chuyên gia</h3>
-              <p>Cấu trúc hero, nỗi đau, lời hứa, lộ trình, quà tặng và CTA để triển khai nhanh.</p>
-            </article>
-            <article class="card">
-              <span class="value">Trị giá 19.868.000đ</span>
-              <h3>Bản đồ hệ thống doanh nghiệp số tinh gọn</h3>
-              <p>Một trang nhìn toàn bộ: khách hàng, sản phẩm, nội dung, phễu, chăm sóc và đo lường.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section proof">
-        <div class="section-title">
-          <span class="label">Điểm khác biệt</span>
-          <h2>Không bán giấc mơ. Bắt đầu từ hệ thống nhỏ đủ chạy.</h2>
-        </div>
-        <div class="proof-row">
-          <div class="stat"><b>2 ngày</b> để nắm khung và dựng nền móng đầu tiên</div>
-          <div class="stat"><b>7 người</b> để giữ không gian kèm sát và sửa trực tiếp</div>
-          <div class="stat"><b>30 ngày</b> kế hoạch hành động sau thử thách</div>
-        </div>
-      </section>
-
-      <section class="register" id="dang-ky">
-        <div class="section">
-          <div>
-            <span class="eyebrow">Đăng ký giữ chỗ</span>
-            <h2>Tham gia thử thách 2 ngày xây dựng doanh nghiệp số tinh gọn</h2>
-            <p>
-              Điền thông tin để Phát lọc đúng người phù hợp. Ưu tiên người đã có chuyên môn, kinh nghiệm thật và muốn xây thêm một hướng đi số bên cạnh công việc hiện tại.
-            </p>
-            <ul class="hero-list">
-              <li>Miễn phí tham gia thử thách.</li>
-              <li>Chỉ nhận 7 người trong đợt này.</li>
-              <li>Phù hợp nếu bạn nghiêm túc muốn xây tài sản riêng bằng AI và đòn bẩy số.</li>
-            </ul>
-          </div>
-          <form class="form" id="leadForm">
-            <h3>Giữ chỗ của bạn</h3>
-            <label for="name">Họ và tên</label>
-            <input id="name" name="name" autocomplete="name" required placeholder="Nhập tên của bạn" />
-
-            <label for="phone">Số điện thoại / Zalo</label>
-            <input id="phone" name="phone" inputmode="tel" required placeholder="Nhập số liên hệ" />
-
-            <label for="role">Bạn đang ở nhóm nào?</label>
-            <select id="role" name="role" required>
-              <option value="">Chọn một nhóm phù hợp</option>
-              <option>Chuyên gia / người có chuyên môn</option>
-              <option>Coach / trainer / tư vấn</option>
-              <option>Chủ doanh nghiệp nhỏ</option>
-              <option>Người có sự nghiệp muốn xây cơ hội thứ 2</option>
-            </select>
-
-            <label for="goal">Mục tiêu gần nhất của bạn</label>
-            <input id="goal" name="goal" placeholder="Ví dụ: có khách đều hơn, có sản phẩm số đầu tiên..." />
-
-            <button class="button full" type="submit">Đăng ký thử thách ngay</button>
-            <div class="success" id="successMessage">Đã ghi nhận thông tin. Phát có thể nối form này với Zalo/CRM khi dùng thật.</div>
-            <p class="form-note">Bản demo hiện lưu thông tin trên trình duyệt để xem trải nghiệm. Khi chạy thật có thể nối Google Sheet, CRM hoặc Zalo OA.</p>
+    <div class="top-line"></div>
+    <main class="page">
+      <section class="section hero">
+        <h1 class="headline">Thử thách 2 ngày miễn phí: Xây doanh nghiệp số tinh gọn.</h1>
+        <p class="subheadline">(1 người - 1 laptop - 1 hệ thống, xây dựng dòng tiền <span class="red">9 chữ số</span>)</p>
+        <img class="hero-image" src="assets/dns-hero.jpg" alt="Bộ tài liệu Doanh nghiệp số tinh gọn" />
+        <p class="keep-seat">Chỉ 7 chỗ duy nhất - Điền thông tin của bạn xuống dưới để được giữ chỗ:</p>
+        <div class="form-card" id="dang-ky">
+          <form class="lead-form" data-lead-form>
+            <input name="name" autocomplete="name" required placeholder="Họ tên" />
+            <input name="phone" autocomplete="tel" required placeholder="Số điện thoại" />
+            <input name="email" autocomplete="email" type="email" required placeholder="Email" />
+            <button class="cta" type="submit">Gửi vé miễn phí cho tôi</button>
+            <p class="form-status" data-form-status></p>
           </form>
+          <p class="secure">(Thông tin của bạn được bảo mật tuyệt đối)</p>
         </div>
       </section>
 
-      <section class="section faq">
-        <div class="section-title">
-          <span class="label">Câu hỏi thường gặp</span>
-          <h2>Trước khi bạn giữ chỗ</h2>
+      <div class="divider"></div>
+
+      <section class="section center">
+        <p class="kicker">Dành cho chuyên gia, người có sự nghiệp và chủ doanh nghiệp nhỏ</p>
+        <h2 class="impact-title">Bạn không cần thêm một công việc nữa. Bạn cần một hệ thống.</h2>
+        <p class="body-copy">
+          Trong 2 ngày, Phát hướng dẫn bạn biến chuyên môn, kinh nghiệm và uy tín cá nhân thành một mô hình doanh nghiệp số tinh gọn:
+          rõ khách hàng, rõ sản phẩm, rõ nội dung, rõ phễu và rõ cách tạo dòng tiền.
+        </p>
+        <button class="mini-cta" data-open-modal>Giữ chỗ miễn phí ngay</button>
+      </section>
+
+      <section class="section two-col">
+        <div class="text-box">
+          <h3>Sau 2 ngày bạn có gì?</h3>
+          <ul class="check-list">
+            <li>Bản đồ doanh nghiệp số theo mô hình 1 người - 1 laptop - 1 hệ thống.</li>
+            <li>Chân dung khách hàng và thông điệp nhân hiệu rõ ràng hơn.</li>
+            <li>Khung nội dung thu hút đúng người, tạo niềm tin và chuyển đổi.</li>
+            <li>Bộ hành động để bắt đầu xây cơ hội thứ 2 bằng AI và đòn bẩy số.</li>
+          </ul>
         </div>
-        <details open>
-          <summary>Tôi không giỏi công nghệ có tham gia được không?</summary>
-          <p>Được. Thử thách tập trung vào mô hình, tư duy hệ thống và các bước triển khai đơn giản bằng công cụ có sẵn.</p>
-        </details>
-        <details>
-          <summary>Tôi chưa có sản phẩm số thì sao?</summary>
-          <p>Vẫn phù hợp nếu bạn có chuyên môn hoặc kinh nghiệm thật. Một phần của thử thách là làm rõ thứ có thể đóng gói thành sản phẩm hoặc dịch vụ số.</p>
-        </details>
-        <details>
-          <summary>Vì sao chỉ nhận 7 người?</summary>
-          <p>Vì mô hình này cần sửa trực tiếp theo từng người: chuyên môn khác nhau, khách hàng khác nhau, lời mời khác nhau.</p>
-        </details>
+        <div>
+          <img src="assets/zoom-proof.jpg" alt="Lớp học Zoom Doanh nghiệp số tinh gọn" />
+          <p class="yellow-note">Học trực tiếp trên Zoom - tập trung vào làm ra bản đồ hệ thống của chính bạn.</p>
+        </div>
+      </section>
+
+      <section class="section center">
+        <h2 class="impact-title">Nếu bạn đang giỏi chuyên môn nhưng chưa có hệ thống bán hàng riêng</h2>
+        <p class="body-copy">
+          Bạn có thể đang có kinh nghiệm thật, câu chuyện thật, giá trị thật, nhưng mọi thứ còn rời rạc:
+          đăng bài chưa đều, khách hàng chưa rõ, sản phẩm chưa đóng gói, quy trình chưa chạy được khi chỉ có một mình.
+        </p>
+        <p class="body-copy">
+          Thử thách này giúp bạn gom lại thành một đường đi gọn hơn: <strong>tâm thức đúng, nhân hiệu rõ, nội dung đều, phễu đơn giản, hành động cụ thể.</strong>
+        </p>
+        <button class="mini-cta" data-open-modal>Tôi muốn xây hệ thống của mình</button>
+      </section>
+
+      <section class="section">
+        <div class="proof-grid">
+          <article class="proof-card">
+            <h3>Ngày 1: Làm rõ nền móng</h3>
+            <p>Xác định thị trường ngách, khách hàng phù hợp, lời hứa chuyển đổi và câu chuyện nhân hiệu để khách hàng nhớ tới bạn.</p>
+          </article>
+          <article class="proof-card">
+            <h3>Ngày 2: Dựng hệ thống tinh gọn</h3>
+            <p>Thiết kế phễu nội dung, quà tặng, lời mời, quy trình chăm sóc và hành động 7 ngày sau lớp.</p>
+          </article>
+          <article class="proof-card">
+            <h3>Không học lan man</h3>
+            <p>Mỗi phần đều đi thẳng vào bản đồ kinh doanh số của bạn, không lý thuyết dàn trải, không công cụ cho vui.</p>
+          </article>
+          <article class="proof-card">
+            <h3>Có cộng đồng đồng hành</h3>
+            <p>Sau khi đăng ký, bạn vào nhóm Zalo để nhận lịch học, tài liệu và các thông báo quan trọng.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section center">
+        <p class="kicker">Tin nhắn thường gặp</p>
+        <h2 class="impact-title">Người học thường bị kẹt ở đâu?</h2>
+        <div class="message-strip" aria-label="Mô phỏng tin nhắn phản hồi">
+          <div class="bubble">Em có chuyên môn nhưng không biết đóng gói thành sản phẩm số như thế nào.</div>
+          <div class="bubble right">Trong lớp mình sẽ làm rõ sản phẩm, khách hàng và lộ trình chuyển đổi trước.</div>
+          <div class="bubble">Em đăng bài nhiều nhưng chưa ra khách hàng đều.</div>
+          <div class="bubble right">Mình sẽ dựng lại trục nội dung: thu hút, tin tưởng, chuyển đổi và chăm sóc.</div>
+          <div class="bubble">Một mình em có làm nổi không?</div>
+          <div class="bubble right">Được, nếu hệ thống đủ tinh gọn và biết dùng AI đúng chỗ.</div>
+        </div>
+        <button class="mini-cta" data-open-modal>Đăng ký nhận vé miễn phí</button>
+      </section>
+
+      <section class="speaker-band">
+        <div class="section">
+          <img src="assets/zoom-proof.jpg" alt="Huỳnh Tiến Phát đào tạo trên Zoom" />
+          <div>
+            <h2>Người hướng dẫn: Huỳnh Tiến Phát</h2>
+            <ul class="check-list">
+              <li>Đồng hành cùng chuyên gia, người có sự nghiệp và chủ doanh nghiệp nhỏ.</li>
+              <li>Giúp chuyển hóa chuyên môn, kinh nghiệm thành doanh nghiệp số tinh gọn.</li>
+              <li>Tập trung mô hình 1 người - 1 laptop - 1 hệ thống cùng AI và đòn bẩy số.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section center">
+        <p class="kicker">Bạn nhận được gì khi tham gia</p>
+        <h2 class="impact-title">Bộ quà tặng trong thử thách 2 ngày</h2>
+        <div class="offer-stack">
+          <article class="offer">
+            <img src="assets/dns-hero.jpg" alt="Bộ tài liệu xây dựng nhân hiệu" />
+            <div>
+              <h3>Bản đồ nhân hiệu</h3>
+              <p>Khung xác định bạn giúp ai, đạt điều gì, bằng cách nào, để nội dung không bị loãng.</p>
+              <button class="mini-cta" data-open-modal>Nhận miễn phí</button>
+            </div>
+          </article>
+          <article class="offer">
+            <img src="assets/zoom-proof.jpg" alt="Lớp học doanh nghiệp số" />
+            <div>
+              <h3>Khung nội dung 7 ngày</h3>
+              <p>Gợi ý nội dung tạo niềm tin, kể câu chuyện, chia sẻ giá trị và mời khách hàng hành động.</p>
+              <button class="mini-cta" data-open-modal>Giữ chỗ học Zoom</button>
+            </div>
+          </article>
+          <article class="offer">
+            <img src="assets/dns-hero.jpg" alt="Hệ thống đòn bẩy số" />
+            <div>
+              <h3>Sơ đồ hệ thống tinh gọn</h3>
+              <p>Biết cần có những mảnh ghép nào để bắt đầu tạo dòng tiền mà không tự làm rối mình.</p>
+              <button class="mini-cta" data-open-modal>Lấy vé tham gia</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section center">
+        <div class="final-box">
+          <p class="kicker">Bước cuối cùng</p>
+          <h2 class="impact-title">Điền thông tin để nhận lịch học, tài liệu và link nhóm Zalo</h2>
+          <p class="body-copy">Form chỉ gồm 3 thông tin cần thiết. Đăng ký xong bạn sẽ được chuyển sang trang chúc mừng để vào nhóm Zalo ngay.</p>
+          <button class="cta" type="button" data-open-modal>Gửi vé miễn phí cho tôi</button>
+          <p class="secure">(Chỉ 7 chỗ duy nhất cho phiên thử thách này)</p>
+        </div>
       </section>
     </main>
 
-    <footer>
-      © 2026 Huỳnh Tiến Phát. Landing page demo cho thử thách doanh nghiệp số tinh gọn.
-    </footer>
+    <div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-box">
+        <button class="close" type="button" aria-label="Đóng popup" data-close-modal>&times;</button>
+        <h2 class="modal-title" id="modal-title">Điền thông tin để giữ chỗ</h2>
+        <p class="modal-sub">Nhận vé miễn phí tham gia thử thách 2 ngày: Xây doanh nghiệp số tinh gọn.</p>
+        <form class="lead-form" data-lead-form>
+          <input name="name" autocomplete="name" required placeholder="Họ tên" />
+          <input name="phone" autocomplete="tel" required placeholder="Số điện thoại" />
+          <input name="email" autocomplete="email" type="email" required placeholder="Email" />
+          <button class="cta" type="submit">Gửi vé miễn phí cho tôi</button>
+          <p class="form-status" data-form-status></p>
+        </form>
+        <p class="secure">(Thông tin của bạn được bảo mật tuyệt đối)</p>
+      </div>
+    </div>
 
     <script>
-      const form = document.querySelector("#leadForm");
-      const success = document.querySelector("#successMessage");
+      const modal = document.getElementById("lead-modal");
+      const openButtons = document.querySelectorAll("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      let modalShownAutomatically = false;
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = Object.fromEntries(new FormData(form).entries());
-        const leads = JSON.parse(localStorage.getItem("phatLandingLeads") || "[]");
-        leads.push({ ...data, createdAt: new Date().toISOString() });
-        localStorage.setItem("phatLandingLeads", JSON.stringify(leads));
-        success.style.display = "block";
-        form.reset();
+      function openModal() {
+        modal.classList.add("open");
+        const firstInput = modal.querySelector("input");
+        if (firstInput) firstInput.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove("open");
+      }
+
+      openButtons.forEach((button) => button.addEventListener("click", openModal));
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeModal();
+      });
+
+      window.setTimeout(() => {
+        if (!modalShownAutomatically) {
+          modalShownAutomatically = true;
+          openModal();
+        }
+      }, 6500);
+
+      async function submitLead(form) {
+        const status = form.querySelector("[data-form-status]");
+        const button = form.querySelector("button[type='submit']");
+        const payload = {
+          name: form.elements.name.value.trim(),
+          phone: form.elements.phone.value.trim(),
+          email: form.elements.email.value.trim(),
+          source: "phat-digital-landing",
+          thankYouPage: "thank-you.html",
+          submittedAt: new Date().toISOString()
+        };
+
+        status.textContent = "Đang ghi nhận thông tin...";
+        button.disabled = true;
+
+        try {
+          const response = await fetch("/api/lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!response.ok && response.status !== 501) {
+            throw new Error("submit_failed");
+          }
+
+          if (response.status === 501) {
+            const saved = JSON.parse(localStorage.getItem("phatLeads") || "[]");
+            saved.push(payload);
+            localStorage.setItem("phatLeads", JSON.stringify(saved));
+          }
+
+          window.location.href = "thank-you.html";
+        } catch (error) {
+          const saved = JSON.parse(localStorage.getItem("phatLeads") || "[]");
+          saved.push(payload);
+          localStorage.setItem("phatLeads", JSON.stringify(saved));
+          window.location.href = "thank-you.html";
+        }
+      }
+
+      document.querySelectorAll("[data-lead-form]").forEach((form) => {
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          submitLead(form);
+        });
       });
     </script>
   </body>
