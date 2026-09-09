@@ -462,6 +462,12 @@
         font-weight: 800;
       }
 
+      .modal-product {
+        width: min(560px, 100%);
+        margin: 0 auto 20px;
+        border-radius: 5px;
+      }
+
       .modal .cta {
         min-height: 78px;
         font-size: clamp(27px, 4.6vw, 42px);
@@ -507,6 +513,10 @@
         .proof-grid {
           grid-template-columns: 1fr;
         }
+
+        .modal-product {
+          width: min(420px, 100%);
+        }
       }
     </style>
   </head>
@@ -516,7 +526,7 @@
       <section class="section hero">
         <h1 class="headline">Thử thách 2 ngày miễn phí: Xây doanh nghiệp số tinh gọn.</h1>
         <p class="subheadline">(1 người - 1 laptop - 1 hệ thống, xây dựng dòng tiền <span class="red">9 chữ số</span>)</p>
-        <img class="hero-image" src="assets/dns-hero.jpg" alt="Bộ tài liệu Doanh nghiệp số tinh gọn" />
+        <img class="hero-image" src="assets/hero-zoom.jpg" alt="Lớp Zoom Doanh nghiệp số tinh gọn" />
         <p class="keep-seat">Chỉ 7 chỗ duy nhất - Điền thông tin của bạn xuống dưới để được giữ chỗ:</p>
         <div class="form-card" id="dang-ky">
           <form class="lead-form" data-lead-form>
@@ -666,6 +676,7 @@
         <button class="close" type="button" aria-label="Đóng popup" data-close-modal>&times;</button>
         <h2 class="modal-title" id="modal-title">Điền thông tin để giữ chỗ</h2>
         <p class="modal-sub">Nhận vé miễn phí tham gia thử thách 2 ngày: Xây doanh nghiệp số tinh gọn.</p>
+        <img class="modal-product" src="assets/dns-hero.jpg" alt="Bộ quà tặng Doanh nghiệp số tinh gọn" />
         <form class="lead-form" data-lead-form>
           <input name="name" autocomplete="name" required placeholder="Họ tên" />
           <input name="phone" autocomplete="tel" required placeholder="Số điện thoại" />
