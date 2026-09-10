@@ -65,7 +65,7 @@
       }
 
       .page {
-        width: min(1280px, 100%);
+        width: min(1600px, 100%);
         margin: 0 auto;
         background: var(--paper);
         overflow: hidden;
@@ -77,7 +77,7 @@
       }
 
       .section {
-        width: min(1060px, calc(100% - 36px));
+        width: min(1120px, calc(100% - 36px));
         margin: 0 auto;
         padding: clamp(42px, 6vw, 78px) 0;
       }
@@ -397,9 +397,20 @@
         margin-top: 12px;
       }
 
-      .proof-image {
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
         width: min(980px, 100%);
-        margin: 20px auto 0;
+        margin: 24px auto 0;
+        align-items: start;
+      }
+
+      .proof-image {
+        width: 100%;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
       }
 
       .expect {
@@ -417,11 +428,13 @@
 
       .day-card {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
-        gap: clamp(42px, 7vw, 94px);
+        grid-template-columns: minmax(470px, 1fr) minmax(440px, 0.92fr);
+        gap: clamp(40px, 4.8vw, 76px);
         align-items: center;
-        margin: 0 auto 62px;
-        padding: clamp(34px, 5vw, 58px);
+        width: min(1480px, calc(100vw - 52px));
+        margin: 0 0 68px 50%;
+        padding: clamp(42px, 4.2vw, 70px) clamp(48px, 5vw, 88px);
+        transform: translateX(-50%);
         border-radius: 26px;
         background: #f7f7f7;
       }
@@ -451,28 +464,33 @@
       }
 
       .lesson-title {
-        margin: 0 0 36px;
+        max-width: 760px;
+        margin: 0 0 34px;
         font-family: Anton, Impact, "Arial Narrow", sans-serif;
-        font-size: clamp(36px, 4.7vw, 62px);
+        font-size: clamp(34px, 3.25vw, 58px);
         font-style: italic;
-        line-height: 1.22;
+        line-height: 1.18;
         text-transform: uppercase;
+        word-break: normal;
+        overflow-wrap: normal;
       }
 
       .lesson-copy {
+        max-width: 720px;
         margin: 0 0 24px;
-        font-size: clamp(20px, 2vw, 27px);
-        line-height: 1.68;
+        font-size: clamp(20px, 1.7vw, 27px);
+        line-height: 1.72;
       }
 
       .lesson-list {
         display: grid;
         gap: 18px;
+        max-width: 720px;
         margin: 0 0 28px;
         padding: 0;
         list-style: none;
-        font-size: clamp(20px, 2vw, 27px);
-        line-height: 1.6;
+        font-size: clamp(20px, 1.7vw, 27px);
+        line-height: 1.68;
       }
 
       .note-box,
@@ -484,11 +502,12 @@
       }
 
       .note-box {
+        max-width: 760px;
         margin-top: 24px;
         padding: 16px 22px;
         border-radius: 16px;
-        font-size: clamp(19px, 2vw, 25px);
-        line-height: 1.55;
+        font-size: clamp(19px, 1.6vw, 25px);
+        line-height: 1.62;
       }
 
       .lesson-image {
@@ -522,17 +541,19 @@
 
       .gift-card {
         display: grid;
-        grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
-        gap: clamp(34px, 5vw, 68px);
+        grid-template-columns: minmax(420px, 0.82fr) minmax(520px, 1fr);
+        gap: clamp(40px, 4.8vw, 76px);
         align-items: center;
-        margin: 0 auto 34px;
-        padding: clamp(26px, 4vw, 50px);
+        width: min(1360px, calc(100vw - 52px));
+        margin: 0 0 42px 50%;
+        padding: clamp(34px, 4vw, 58px) clamp(42px, 4.6vw, 72px);
+        transform: translateX(-50%);
         border-radius: 12px;
         background: #f1f1f1;
       }
 
       .gift-card.reverse {
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 42%);
+        grid-template-columns: minmax(520px, 1fr) minmax(420px, 0.82fr);
       }
 
       .gift-card.reverse .gift-media {
@@ -557,10 +578,13 @@
       }
 
       .gift-title {
+        max-width: 780px;
         margin: 0 auto 16px;
         font-family: Anton, Impact, "Arial Narrow", sans-serif;
-        font-size: clamp(30px, 3.7vw, 50px);
-        line-height: 1.22;
+        font-size: clamp(30px, 3.1vw, 48px);
+        line-height: 1.24;
+        word-break: normal;
+        overflow-wrap: normal;
       }
 
       .gift-value {
@@ -571,19 +595,21 @@
       }
 
       .gift-copy {
+        max-width: 760px;
         margin: 0 0 24px;
         color: #333;
-        font-size: clamp(19px, 2vw, 26px);
-        line-height: 1.68;
+        font-size: clamp(19px, 1.65vw, 26px);
+        line-height: 1.74;
       }
 
       .gift-note {
+        max-width: 760px;
         margin: 26px 0 22px;
         padding: 14px 18px;
         border-style: dashed;
         border-radius: 14px;
-        font-size: clamp(18px, 1.8vw, 23px);
-        line-height: 1.48;
+        font-size: clamp(18px, 1.5vw, 23px);
+        line-height: 1.58;
       }
 
       .cta-small {
@@ -1051,6 +1077,36 @@
         font-weight: 900;
       }
 
+      @media (max-width: 1180px) {
+        .day-card,
+        .gift-card,
+        .gift-card.reverse {
+          grid-template-columns: 1fr;
+          width: min(820px, calc(100vw - 32px));
+          gap: 30px;
+          padding: 34px 24px;
+        }
+
+        .gift-card.reverse .gift-media {
+          order: 0;
+        }
+
+        .lesson-title,
+        .gift-title {
+          max-width: 100%;
+          font-size: clamp(34px, 6.2vw, 48px);
+          line-height: 1.2;
+        }
+
+        .lesson-copy,
+        .lesson-list,
+        .note-box,
+        .gift-copy,
+        .gift-note {
+          max-width: 100%;
+        }
+      }
+
       @media (max-width: 800px) {
         body {
           font-size: 18px;
@@ -1070,16 +1126,12 @@
         .day-card,
         .gift-card,
         .gift-card.reverse {
-          grid-template-columns: 1fr;
           gap: 28px;
           padding: 28px 18px;
         }
 
-        .gift-card.reverse .gift-media {
-          order: 0;
-        }
-
         .compare-grid,
+        .proof-grid,
         .coach-grid,
         .delay-grid,
         .closing-grid,
@@ -1261,8 +1313,12 @@
         <p class="paragraph">Để cuối cùng, bạn có thể tự tin thoát khỏi mô hình cũ, không còn loay hoay khổ sở, mở ra dòng thu nhập tăng trưởng đều theo thời gian.</p>
         <h2 class="model-title green">Đừng tin ngay!</h2>
         <p class="paragraph"><em>Hãy xem...</em></p>
-        <img class="proof-image" src="assets/proof-messages-1.jpg" alt="Tin nhắn phản hồi của học viên" />
-        <img class="proof-image" src="assets/proof-messages-2.jpg" alt="Bằng chứng học viên áp dụng hệ thống" />
+        <div class="proof-grid">
+          <img class="proof-image" src="assets/proof-message-1-hq.png" alt="Tin nhắn phản hồi của học viên 1" />
+          <img class="proof-image" src="assets/proof-message-2-hq.png" alt="Tin nhắn phản hồi của học viên 2" />
+          <img class="proof-image" src="assets/proof-message-3-hq.png" alt="Tin nhắn phản hồi của học viên 3" />
+          <img class="proof-image" src="assets/proof-message-4-hq.png" alt="Tin nhắn phản hồi của học viên 4" />
+        </div>
       </section>
 
       <section class="section expect">
@@ -1277,7 +1333,7 @@
             <p class="lesson-copy">Phát sẽ bóc tách nền móng: chọn đúng thị trường, tạo nội dung thu hút, xây phễu đơn giản và biến chuyên môn thành tài sản số.</p>
             <div class="note-box">Dù bạn là người mới, bạn vẫn làm được ngay tại chỗ - chỉ cần có điện thoại và biết bấm vào Zalo.</div>
           </div>
-          <img class="lesson-image" src="assets/day1-phat-mic.jpg" alt="Huỳnh Tiến Phát chia sẻ hệ thống doanh nghiệp số" />
+          <img class="lesson-image" src="assets/day1-phat-mic-hq.jpg" alt="Huỳnh Tiến Phát chia sẻ hệ thống doanh nghiệp số" />
         </article>
 
         <article class="day-card">
@@ -1313,7 +1369,7 @@
             </ul>
             <div class="note-box">Mục tiêu của ngày 2 là bạn tự tay chạm vào hệ thống và biết cách dùng nó sau chương trình.</div>
           </div>
-          <img class="lesson-image" src="assets/day2-workshop-group.jpg" alt="Học viên thực hành xây hệ thống doanh nghiệp số" />
+          <img class="lesson-image" src="assets/day2-workshop-group-hq.jpg" alt="Học viên thực hành xây hệ thống doanh nghiệp số" />
         </article>
 
         <article class="day-card">
@@ -1344,7 +1400,7 @@
         </article>
 
         <article class="gift-card reverse">
-          <img class="gift-media" src="assets/gift-value-sharing.jpg" alt="Hệ thống nội dung chia sẻ giá trị làm sẵn" />
+          <img class="gift-media" src="assets/gift-value-sharing-hq.jpg" alt="Hệ thống nội dung chia sẻ giá trị làm sẵn" />
           <div>
             <h3 class="gift-heading">Quà tặng #2</h3>
             <h4 class="gift-title">Hệ thống nội dung chia sẻ giá trị làm sẵn 365 ngày</h4>
@@ -1368,7 +1424,7 @@
         </article>
 
         <article class="gift-card reverse">
-          <img class="gift-media" src="assets/gift-money-mindset.jpg" alt="Hệ thống phát triển trọn đời của tiền" />
+          <img class="gift-media" src="assets/gift-money-mindset-hq.jpg" alt="Hệ thống phát triển trọn đời của tiền" />
           <div>
             <h3 class="gift-heading">Quà tặng #4</h3>
             <h4 class="gift-title">Hệ thống phát triển trọn đời của tiền</h4>
@@ -1404,7 +1460,7 @@
         </article>
 
         <article class="gift-card">
-          <img class="gift-media" src="assets/gift-lifetime-cashflow.jpg" alt="Bí mật phát triển dòng tiền trọn đời" />
+          <img class="gift-media" src="assets/gift-lifetime-cashflow-hq.jpg" alt="Bí mật phát triển dòng tiền trọn đời" />
           <div>
             <h3 class="gift-heading">Quà tặng #7</h3>
             <h4 class="gift-title">Bí mật hệ thống phát triển dòng tiền trọn đời</h4>
@@ -1442,7 +1498,7 @@
         <div class="compare-grid">
           <article class="compare-card before">
             <h3>Trước<br />thử thách</h3>
-            <img src="assets/before-challenge.jpg" alt="Trước thử thách còn loay hoay với mô hình online" />
+            <img src="assets/before-challenge-hq.jpg" alt="Trước thử thách còn loay hoay với mô hình online" />
             <ul>
               <li>Từng nghĩ kiếm tiền online chỉ dành cho người giỏi công nghệ.</li>
               <li>Đứng nhìn người khác có khách, có tiền nhưng không dám thử vì sợ thất bại.</li>
@@ -1453,7 +1509,7 @@
           </article>
           <article class="compare-card after">
             <h3>Sau<br />thử thách</h3>
-            <img src="assets/after-challenge.jpg" alt="Sau thử thách có hệ thống doanh nghiệp số" />
+            <img src="assets/after-challenge-hq.jpg" alt="Sau thử thách có hệ thống doanh nghiệp số" />
             <ul>
               <li>Ngay tại lớp, bạn biết cách copy - dán để dựng hệ thống đầu tiên.</li>
               <li>Không lý thuyết màu mè, chỉ tập trung vào việc làm ra kết quả thực tế.</li>
@@ -1547,7 +1603,7 @@
       </section>
 
       <section class="section closing-grid">
-        <img class="lesson-image" src="assets/phat-sydney.jpg" alt="Huỳnh Tiến Phát tại Sydney" />
+        <img class="lesson-image" src="assets/phat-sydney-hq.jpg" alt="Huỳnh Tiến Phát tại Sydney" />
         <div class="closing-copy">
           <h2>Bạn có thể còn đang lưỡng lự...</h2>
           <p>Trong khi đó, ngoài kia có hàng ngàn người đang tận dụng công cụ đòn bẩy và Internet để xây dựng hệ thống thu hút khách hàng mỗi ngày.</p>
