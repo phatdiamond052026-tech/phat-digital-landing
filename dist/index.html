@@ -9,7 +9,7 @@
       content="Thử thách 2 ngày miễn phí giúp người có chuyên môn biến kinh nghiệm cá nhân thành hệ thống doanh nghiệp số tinh gọn."
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@600;700&display=swap");
 
       :root {
         --red: #a90000;
@@ -924,7 +924,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        padding: 18px;
+        padding: 10px;
         background: rgba(0, 0, 0, 0.72);
       }
 
@@ -934,63 +934,79 @@
 
       .modal-box {
         position: relative;
-        width: min(820px, 100%);
-        max-height: 92vh;
+        width: min(760px, calc(100vw - 28px));
+        max-height: calc(100vh - 24px);
         overflow: auto;
-        border-radius: 4px;
+        border: 7px solid #8f9bab;
+        border-radius: 0;
         background: #fff;
-        padding: clamp(24px, 4vw, 42px) clamp(18px, 4.5vw, 58px) 28px;
+        padding: 28px clamp(18px, 4vw, 48px) 24px;
         text-align: center;
       }
 
       .close {
         position: absolute;
-        top: 14px;
-        right: 16px;
-        width: 46px;
-        height: 46px;
-        border: 0;
+        top: 8px;
+        right: 8px;
+        width: 31px;
+        height: 31px;
+        border: 3px solid #7d8792;
         border-radius: 50%;
         background: #0f0f0f;
         color: #fff;
         cursor: pointer;
-        font-size: 34px;
+        font-size: 25px;
         line-height: 1;
       }
 
       .modal-title {
-        margin: 0 0 12px;
-        font-size: clamp(42px, 6vw, 70px);
-        line-height: 1.05;
+        width: min(650px, 100%);
+        margin: 0 auto 18px;
+        font-family: Oswald, Anton, Impact, "Arial Narrow", sans-serif;
+        font-weight: 700;
+        font-size: clamp(24px, 3.2vw, 33px);
+        line-height: 1.24;
+        letter-spacing: 0;
+        text-transform: uppercase;
       }
 
       .modal-sub {
-        width: min(660px, 100%);
-        margin: 0 auto 22px;
-        font-size: clamp(20px, 2.4vw, 30px);
-        line-height: 1.45;
+        display: none;
+      }
+
+      .modal-red {
+        color: #ff0000;
+      }
+
+      .modal-seat {
+        margin: 14px auto 12px;
+        font-family: Oswald, Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(20px, 2.6vw, 29px);
+        line-height: 1.24;
         font-weight: 900;
       }
 
       .modal-product {
-        width: min(560px, 100%);
-        margin: 0 auto 22px;
+        width: min(640px, 100%);
+        margin: 0 auto 0;
         border-radius: 4px;
       }
 
       .lead-form {
         display: grid;
-        gap: 24px;
+        gap: 12px;
+        width: min(560px, 100%);
+        margin: 0 auto;
       }
 
       .lead-form input {
         width: 100%;
-        min-height: 86px;
+        min-height: 45px;
         border: 1px solid #bcbcbc;
-        border-radius: 7px;
-        padding: 0 32px;
+        border-radius: 6px;
+        padding: 0 20px;
         color: #333;
-        font-size: clamp(25px, 3.1vw, 37px);
+        font-size: clamp(17px, 2vw, 21px);
         outline: none;
       }
 
@@ -1000,14 +1016,16 @@
       }
 
       .lead-form .submit {
-        min-height: 108px;
+        min-height: 74px;
+        margin-top: 18px;
         border: 0;
         border-radius: 6px;
         background: var(--green-dark);
         color: #fff;
         cursor: pointer;
-        font-family: Anton, Impact, "Arial Narrow", sans-serif;
-        font-size: clamp(38px, 5.4vw, 66px);
+        font-family: Oswald, Anton, Impact, "Arial Narrow", sans-serif;
+        font-weight: 700;
+        font-size: clamp(27px, 4vw, 43px);
         line-height: 1;
         text-transform: uppercase;
       }
@@ -1018,9 +1036,9 @@
       }
 
       .secure {
-        margin: 26px 0 0;
+        margin: 22px 0 0;
         color: #8a8a8a;
-        font-size: clamp(22px, 2.5vw, 34px);
+        font-size: clamp(18px, 2.2vw, 25px);
         line-height: 1.35;
         font-weight: 900;
       }
@@ -1088,12 +1106,12 @@
         }
 
         .lead-form input {
-          min-height: 70px;
-          padding: 0 20px;
+          min-height: 44px;
+          padding: 0 16px;
         }
 
         .lead-form .submit {
-          min-height: 88px;
+          min-height: 66px;
         }
       }
     </style>
@@ -1546,9 +1564,13 @@
     <div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-box">
         <button class="close" type="button" aria-label="Đóng popup" data-close-modal>&times;</button>
-        <h2 class="modal-title" id="modal-title">Điền thông tin để giữ chỗ</h2>
+        <h2 class="modal-title" id="modal-title">
+          Thử thách 2 ngày miễn phí: Xây doanh nghiệp số tinh gọn.<br />
+          (1 người - 1 laptop - 1 hệ thống, xây dựng dòng tiền <span class="modal-red">9 chữ số</span>)
+        </h2>
         <p class="modal-sub">Nhận vé miễn phí tham gia thử thách 2 ngày: Xây doanh nghiệp số tinh gọn.</p>
         <img class="modal-product" src="assets/dns-hero.jpg" alt="Bộ Doanh nghiệp số tinh gọn" />
+        <p class="modal-seat">Chỉ 7 chỗ duy nhất - Điền thông tin của bạn xuống dưới để được giữ chỗ:</p>
         <form class="lead-form" data-lead-form>
           <input name="name" autocomplete="name" required placeholder="Họ tên" />
           <input name="phone" autocomplete="tel" required placeholder="Số điện thoại" />
