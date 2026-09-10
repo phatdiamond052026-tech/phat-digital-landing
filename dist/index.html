@@ -402,6 +402,212 @@
         margin: 20px auto 0;
       }
 
+      .expect {
+        background: #fff;
+      }
+
+      .expect-kicker {
+        margin: -10px auto 42px;
+        color: #333;
+        font-size: clamp(22px, 2.4vw, 32px);
+        line-height: 1.5;
+        text-align: center;
+        font-style: italic;
+      }
+
+      .day-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 520px);
+        gap: clamp(42px, 7vw, 94px);
+        align-items: center;
+        margin: 0 auto 62px;
+        padding: clamp(34px, 5vw, 58px);
+        border-radius: 26px;
+        background: #f7f7f7;
+      }
+
+      .day-card:nth-of-type(even) {
+        background: #fff;
+      }
+
+      .day-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 14px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(31px, 3.8vw, 50px);
+        line-height: 1.1;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+
+      .day-label::before,
+      .gift-heading::before {
+        content: "▣";
+        color: var(--green);
+        font-size: 0.8em;
+        line-height: 1;
+      }
+
+      .lesson-title {
+        margin: 0 0 36px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(36px, 4.7vw, 62px);
+        font-style: italic;
+        line-height: 1.22;
+        text-transform: uppercase;
+      }
+
+      .lesson-copy {
+        margin: 0 0 24px;
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.68;
+      }
+
+      .lesson-list {
+        display: grid;
+        gap: 18px;
+        margin: 0 0 28px;
+        padding: 0;
+        list-style: none;
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.6;
+      }
+
+      .note-box,
+      .gift-note {
+        border: 3px solid var(--green);
+        background: #fffdf3;
+        color: #111;
+        font-weight: 800;
+      }
+
+      .note-box {
+        margin-top: 24px;
+        padding: 16px 22px;
+        border-radius: 16px;
+        font-size: clamp(19px, 2vw, 25px);
+        line-height: 1.55;
+      }
+
+      .lesson-image {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .gifts {
+        background: #fff;
+      }
+
+      .gift-super-title {
+        margin: 0 auto 8px;
+        color: var(--green);
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(44px, 6vw, 84px);
+        line-height: 1.12;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .gift-super-sub {
+        max-width: 1040px;
+        margin: 0 auto 46px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(31px, 4vw, 58px);
+        line-height: 1.22;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .gift-card {
+        display: grid;
+        grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+        gap: clamp(34px, 5vw, 68px);
+        align-items: center;
+        margin: 0 auto 34px;
+        padding: clamp(26px, 4vw, 50px);
+        border-radius: 12px;
+        background: #f1f1f1;
+      }
+
+      .gift-card.reverse {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 42%);
+      }
+
+      .gift-card.reverse .gift-media {
+        order: 2;
+      }
+
+      .gift-media {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.18);
+      }
+
+      .gift-heading {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(38px, 4.7vw, 66px);
+        line-height: 1.08;
+        text-transform: uppercase;
+      }
+
+      .gift-title {
+        margin: 0 auto 16px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(30px, 3.7vw, 50px);
+        line-height: 1.22;
+      }
+
+      .gift-value {
+        margin: 0 0 28px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(25px, 3vw, 38px);
+        line-height: 1.2;
+      }
+
+      .gift-copy {
+        margin: 0 0 24px;
+        color: #333;
+        font-size: clamp(19px, 2vw, 26px);
+        line-height: 1.68;
+      }
+
+      .gift-note {
+        margin: 26px 0 22px;
+        padding: 14px 18px;
+        border-style: dashed;
+        border-radius: 14px;
+        font-size: clamp(18px, 1.8vw, 23px);
+        line-height: 1.48;
+      }
+
+      .cta-small {
+        display: inline-block;
+        min-width: min(420px, 100%);
+        padding: 14px 22px;
+        border-radius: 5px;
+        background: var(--green);
+        color: #fff;
+        font-weight: 900;
+        font-size: clamp(19px, 2vw, 26px);
+        line-height: 1.2;
+      }
+
+      .scarcity-line {
+        max-width: 960px;
+        margin: 48px auto 0;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(30px, 4vw, 56px);
+        line-height: 1.24;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
       .final-live {
         width: min(760px, 100%);
         margin: 0 auto;
@@ -545,6 +751,18 @@
         .split {
           grid-template-columns: 1fr;
           gap: 32px;
+        }
+
+        .day-card,
+        .gift-card,
+        .gift-card.reverse {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          padding: 28px 18px;
+        }
+
+        .gift-card.reverse .gift-media {
+          order: 0;
         }
 
         .signup-card {
@@ -719,6 +937,171 @@
         <p class="paragraph"><em>Hãy xem...</em></p>
         <img class="proof-image" src="assets/proof-messages-1.jpg" alt="Tin nhắn phản hồi của học viên" />
         <img class="proof-image" src="assets/proof-messages-2.jpg" alt="Bằng chứng học viên áp dụng hệ thống" />
+      </section>
+
+      <section class="section expect">
+        <h2 class="model-title">Đây là những gì bạn có thể mong đợi</h2>
+        <p class="expect-kicker">Trong thử thách 2 ngày: dành riêng cho những người muốn xây dựng doanh nghiệp số bên cạnh công việc hiện tại</p>
+
+        <article class="day-card">
+          <div>
+            <p class="day-label">Ngày 1</p>
+            <h3 class="lesson-title">#1 - Bí mật hệ thống doanh nghiệp số: cách xây dựng mô hình kinh doanh trên Internet</h3>
+            <p class="lesson-copy">Bạn sẽ nhìn rõ vì sao chỉ chăm chỉ hơn không đủ, và vì sao người biết xây hệ thống có thể tạo ra kết quả tốt hơn với ít sức hơn.</p>
+            <p class="lesson-copy">Phát sẽ bóc tách nền móng: chọn đúng thị trường, tạo nội dung thu hút, xây phễu đơn giản và biến chuyên môn thành tài sản số.</p>
+            <div class="note-box">Dù bạn là người mới, bạn vẫn làm được ngay tại chỗ - chỉ cần có điện thoại và biết bấm vào Zalo.</div>
+          </div>
+          <img class="lesson-image" src="assets/day1-phat-mic.jpg" alt="Huỳnh Tiến Phát chia sẻ hệ thống doanh nghiệp số" />
+        </article>
+
+        <article class="day-card">
+          <div>
+            <h3 class="lesson-title">#2 - Bí mật X10 thu nhập từ đòn bẩy vô hạn</h3>
+            <p class="lesson-copy">Bạn sẽ học cách không chỉ đổi thời gian lấy tiền, mà dùng nội dung, phễu, hệ thống và cộng đồng để mở rộng giá trị của mình.</p>
+            <p class="lesson-copy">Mục tiêu là biết tiền đến từ đâu, khách đến từ đâu, và cách làm ít hơn nhưng hệ thống vẫn tiếp tục tạo cơ hội mới.</p>
+            <div class="note-box">Bạn nhận được bản đồ 5 đòn bẩy có thể áp dụng ngay vào mô hình doanh nghiệp số tinh gọn.</div>
+          </div>
+          <img class="lesson-image" src="assets/x10-income-system.jpg" alt="Mô hình X10 thu nhập từ đòn bẩy số" />
+        </article>
+
+        <article class="day-card">
+          <div>
+            <h3 class="lesson-title">#3 - Hậu trường mô hình tạo tiền mặt</h3>
+            <p class="lesson-copy">Phát sẽ cho bạn nhìn vào phía sau hệ thống: công cụ nào dùng để tạo nội dung, chăm sóc khách hàng, ghi nhận data và chuyển đổi khách tiềm năng.</p>
+            <p class="lesson-copy">Bạn không chỉ nghe ý tưởng, mà hiểu cách một hệ thống doanh nghiệp số được vận hành từng bước.</p>
+            <div class="note-box">Tập trung vào việc sao chép mô hình đã được chuẩn hóa, thay vì tự mày mò từ đầu.</div>
+          </div>
+          <img class="lesson-image" src="assets/backend-cash-model.jpg" alt="Hậu trường mô hình doanh nghiệp số tạo tiền mặt" />
+        </article>
+
+        <article class="day-card">
+          <div>
+            <p class="day-label">Ngày 2</p>
+            <h3 class="lesson-title">#1 - Xây dựng hệ thống tự động: bắt đầu vận hành doanh nghiệp số từ Internet</h3>
+            <p class="lesson-copy">Bạn được hướng dẫn cách dùng công cụ, quy trình và tài nguyên đã chuẩn bị sẵn để bắt đầu triển khai từng bước.</p>
+            <ul class="lesson-list">
+              <li>✓ Hệ thống xây sẵn thương hiệu cá nhân</li>
+              <li>✓ Hệ thống thu hút khách hàng tiềm năng</li>
+              <li>✓ Hệ thống chuyển đổi khách tiềm năng ra tiền mặt</li>
+              <li>✓ Quy trình tự động để nhân bản cách làm</li>
+            </ul>
+            <div class="note-box">Mục tiêu của ngày 2 là bạn tự tay chạm vào hệ thống và biết cách dùng nó sau chương trình.</div>
+          </div>
+          <img class="lesson-image" src="assets/day2-workshop-group.jpg" alt="Học viên thực hành xây hệ thống doanh nghiệp số" />
+        </article>
+
+        <article class="day-card">
+          <div>
+            <h3 class="lesson-title">#2 - Bí mật hệ thống tự động có khả năng mở rộng</h3>
+            <p class="lesson-copy">Bạn sẽ hiểu cách tạo nội dung, thu hút đúng khách hàng, xây dựng quy trình chăm sóc và tự động hóa các phần lặp lại trong kinh doanh.</p>
+            <p class="lesson-copy">Thay vì cố làm nhiều hơn, bạn biết cách dựng mô hình giúp mở rộng khả năng tạo giá trị trên Internet.</p>
+            <div class="note-box">Ngay cả khi chưa có nhiều kinh nghiệm công nghệ, bạn vẫn bắt đầu được bằng công cụ và quy trình có sẵn.</div>
+          </div>
+          <img class="lesson-image" src="assets/affiliate-funnel-model.jpg" alt="Phễu doanh nghiệp số tự động" />
+        </article>
+      </section>
+
+      <section class="section gifts">
+        <h2 class="gift-super-title">Quà tặng khổng lồ</h2>
+        <p class="gift-super-sub">Chỉ 7 suất dành cho những người muốn xây một hướng đi kinh doanh mới bên cạnh sự nghiệp hiện tại</p>
+
+        <article class="gift-card">
+          <img class="gift-media" src="assets/gift-content-365.jpg" alt="Hệ thống nội dung đăng lên mạng xã hội 365 ngày" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #1</h3>
+            <h4 class="gift-title">Hệ thống nội dung đăng lên MXH làm sẵn 365 ngày</h4>
+            <p class="gift-value">Trị giá: 10.868.000 VNĐ</p>
+            <p class="gift-copy">Bạn có sẵn khung nội dung để duy trì sự hiện diện mỗi ngày, không còn bí ý tưởng và không phải bắt đầu từ trang trắng.</p>
+            <div class="gift-note">Bạn nhận món quà này miễn phí khi tham gia thử thách 2 ngày. Số lượng chỉ dành cho 7 chỗ ngồi.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card reverse">
+          <img class="gift-media" src="assets/gift-value-sharing.jpg" alt="Hệ thống nội dung chia sẻ giá trị làm sẵn" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #2</h3>
+            <h4 class="gift-title">Hệ thống nội dung chia sẻ giá trị làm sẵn 365 ngày</h4>
+            <p class="gift-value">Trị giá: 12.868.000 VNĐ</p>
+            <p class="gift-copy">Bộ khung giúp bạn chia sẻ kiến thức rõ ràng, tạo niềm tin và kéo đúng người cần giải pháp của bạn.</p>
+            <div class="gift-note">Dùng để xây nhân hiệu, nuôi tệp khách hàng và biến nội dung thành tài sản dài hạn.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card">
+          <img class="gift-media" src="assets/gift-brand-system.jpg" alt="Hệ thống xây thương hiệu chuyên gia" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #3</h3>
+            <h4 class="gift-title">Hệ thống xây thương hiệu chuyên gia</h4>
+            <p class="gift-value">Trị giá: 12.868.000 VNĐ</p>
+            <p class="gift-copy">Bạn có framework để định vị bản thân, nói đúng điều thị trường cần nghe và trở nên đáng tin hơn trên Internet.</p>
+            <div class="gift-note">Phù hợp cho người có chuyên môn nhưng chưa biết đóng gói kinh nghiệm thành thông điệp bán hàng.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card reverse">
+          <img class="gift-media" src="assets/gift-money-mindset.jpg" alt="Hệ thống phát triển trọn đời của tiền" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #4</h3>
+            <h4 class="gift-title">Hệ thống phát triển trọn đời của tiền</h4>
+            <p class="gift-value">Trị giá: 19.868.000 VNĐ</p>
+            <p class="gift-copy">3 nền tảng tư duy giúp bạn nhìn lại cách tạo thu nhập, quản trị thời gian và phát triển mô hình kinh doanh bền vững hơn.</p>
+            <div class="gift-note">Không chỉ học cách làm, bạn còn hiểu vì sao mình cần một mô hình khác để đi xa hơn.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card">
+          <img class="gift-media" src="assets/affiliate-funnel-model.jpg" alt="Hệ thống xây kênh tăng trưởng thần tốc" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #5</h3>
+            <h4 class="gift-title">Hệ thống xây kênh 1.000.000 view thần tốc</h4>
+            <p class="gift-value">Trị giá: 9.868.000 VNĐ</p>
+            <p class="gift-copy">Bản đồ giúp bạn phát triển kênh cá nhân, kéo tệp người xem phù hợp và biến sự chú ý thành cơ hội kinh doanh.</p>
+            <div class="gift-note">Tập trung vào cách xây kênh đơn giản, đều đặn, có mục tiêu rõ, không làm nội dung theo cảm hứng.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card reverse">
+          <img class="gift-media" src="assets/gift-training-duplicate.jpg" alt="Hệ thống đào tạo tự nhân bản" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #6</h3>
+            <h4 class="gift-title">Hệ thống đào tạo tự nhân bản</h4>
+            <p class="gift-value">Trị giá: 9.868.000 VNĐ</p>
+            <p class="gift-copy">Bạn biết cách đóng gói quy trình để người khác có thể làm theo, từ đó mô hình không phụ thuộc hoàn toàn vào sức của một người.</p>
+            <div class="gift-note">Đây là bước quan trọng để mô hình có thể nhân rộng mà không cần bạn ôm mọi việc.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card">
+          <img class="gift-media" src="assets/gift-lifetime-cashflow.jpg" alt="Bí mật phát triển dòng tiền trọn đời" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #7</h3>
+            <h4 class="gift-title">Bí mật hệ thống phát triển dòng tiền trọn đời</h4>
+            <p class="gift-value">Trị giá: 19.868.000 VNĐ</p>
+            <p class="gift-copy">Bạn hiểu cách tạo dòng tiền bền hơn: không chỉ tìm khách mới liên tục, mà xây hệ thống nuôi dưỡng và phát triển mối quan hệ dài hạn.</p>
+            <div class="gift-note">Phù hợp cho người muốn có hướng đi bên cạnh công việc hiện tại nhưng vẫn giữ được nhịp sống ổn định.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <article class="gift-card reverse">
+          <img class="gift-media" src="assets/gift-big-thinking.jpg" alt="Nhóm kín bí mật dòng tiền" />
+          <div>
+            <h3 class="gift-heading">Quà tặng #8</h3>
+            <h4 class="gift-title">Nhóm kín bí mật dòng tiền</h4>
+            <p class="gift-value">Trị giá: 19.868.000 VNĐ</p>
+            <p class="gift-copy">Không gian riêng để nhận hướng dẫn, nhắc việc, tài liệu và kết nối với những người đang cùng xây dựng doanh nghiệp số tinh gọn.</p>
+            <div class="gift-note">Sau khi đăng ký thành công, bạn sẽ được chuyển sang trang chúc mừng để vào nhóm Zalo.</div>
+            <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ</span></button>
+          </div>
+        </article>
+
+        <p class="scarcity-line">Thử thách này duy nhất 7 chỗ ngồi miễn phí và có những quà tặng trị giá lớn dành cho người tham gia sớm</p>
       </section>
 
       <section class="section center-block">
