@@ -608,6 +608,302 @@
         text-transform: uppercase;
       }
 
+      .scarcity-cta {
+        margin: 22px auto 56px;
+        text-align: center;
+      }
+
+      .compare-title {
+        max-width: 1040px;
+        margin: 0 auto 54px;
+        font-size: clamp(32px, 4.2vw, 56px);
+        line-height: 1.28;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .compare-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(28px, 4vw, 56px);
+        align-items: stretch;
+      }
+
+      .compare-card {
+        padding: clamp(26px, 4vw, 50px);
+        border-radius: 10px;
+        background: #d9e0e8;
+        text-align: center;
+      }
+
+      .compare-card.after {
+        background: #0cb2a6;
+      }
+
+      .compare-card h3 {
+        margin: 0 0 22px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(44px, 5vw, 70px);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .compare-card img {
+        width: 100%;
+        margin: 0 auto 26px;
+      }
+
+      .compare-card ul {
+        display: grid;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: clamp(19px, 1.9vw, 25px);
+        line-height: 1.48;
+        text-align: left;
+      }
+
+      .compare-card li {
+        position: relative;
+        padding-left: 34px;
+      }
+
+      .compare-card li::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: 900;
+      }
+
+      .compare-card.before li::before {
+        content: "x";
+        color: #d40000;
+      }
+
+      .compare-card.after li::before {
+        content: "✓";
+        color: #ffef7a;
+      }
+
+      .coach-band {
+        width: 100%;
+        background: #454545;
+        color: #fff;
+      }
+
+      .coach-band .section {
+        width: min(1180px, calc(100% - 36px));
+      }
+
+      .coach-title {
+        margin: 0 auto 54px;
+        color: var(--green);
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(42px, 5.4vw, 76px);
+        line-height: 1.18;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .coach-grid {
+        display: grid;
+        grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+        gap: clamp(42px, 7vw, 92px);
+        align-items: center;
+      }
+
+      .coach-grid img {
+        width: 100%;
+      }
+
+      .coach-name {
+        margin: 0 0 18px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(42px, 5vw, 68px);
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      .coach-sub {
+        margin: 0 0 34px;
+        font-size: clamp(22px, 2.3vw, 32px);
+        line-height: 1.5;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .coach-list {
+        display: grid;
+        gap: 22px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: #e8e8e8;
+        font-size: clamp(19px, 1.9vw, 25px);
+        line-height: 1.55;
+      }
+
+      .delay-grid,
+      .closing-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+        gap: clamp(42px, 6vw, 84px);
+        align-items: center;
+      }
+
+      .big-warning-title {
+        margin: 0 auto 48px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(40px, 5vw, 70px);
+        line-height: 1.16;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .x-list {
+        display: grid;
+        gap: 12px;
+        margin: 24px 0 28px;
+        padding: 0;
+        list-style: none;
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.55;
+      }
+
+      .x-list li::before {
+        content: "x ";
+        color: #e40000;
+        font-weight: 900;
+      }
+
+      .urgent {
+        margin: 34px auto 26px;
+        font-size: clamp(22px, 2.3vw, 31px);
+        line-height: 1.42;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      .bundle-box {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: clamp(28px, 4vw, 52px);
+        border: 5px dashed var(--green);
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .bundle-title {
+        margin: 0 0 16px;
+        color: var(--green);
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(42px, 5.5vw, 76px);
+        line-height: 1.12;
+        text-transform: uppercase;
+      }
+
+      .bundle-sub {
+        margin: 0 auto 28px;
+        font-size: clamp(23px, 2.6vw, 34px);
+        line-height: 1.35;
+        font-weight: 900;
+      }
+
+      .bundle-image {
+        width: min(960px, 100%);
+        margin: 0 auto 32px;
+      }
+
+      .bundle-list {
+        display: grid;
+        gap: 14px;
+        margin: 0 auto 28px;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.5;
+        font-weight: 800;
+      }
+
+      .bundle-list li::before {
+        content: "▣ ";
+        color: var(--green);
+      }
+
+      .price-red {
+        color: #a90000;
+        font-weight: 900;
+      }
+
+      .free-now {
+        margin: 8px 0 18px;
+        color: var(--green);
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(48px, 6vw, 82px);
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .info-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+        background: #eeeeee;
+        text-align: center;
+      }
+
+      .info-card h3 {
+        margin: 0 0 8px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(32px, 3.6vw, 48px);
+        line-height: 1.1;
+      }
+
+      .info-card p {
+        margin: 0;
+        font-size: clamp(17px, 1.8vw, 24px);
+        line-height: 1.42;
+      }
+
+      .closing-grid {
+        grid-template-columns: minmax(280px, 430px) minmax(0, 1fr);
+      }
+
+      .closing-copy {
+        text-align: center;
+      }
+
+      .closing-copy p {
+        margin: 0 0 22px;
+        font-size: clamp(22px, 2.4vw, 32px);
+        line-height: 1.48;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .closing-copy h2 {
+        margin: 0 0 18px;
+        font-family: Anton, Impact, "Arial Narrow", sans-serif;
+        font-size: clamp(38px, 4.6vw, 64px);
+        line-height: 1.18;
+      }
+
+      .site-footer {
+        padding: 46px 18px;
+        background: #000;
+        color: #bdbdbd;
+        text-align: center;
+        font-size: 16px;
+      }
+
       .final-live {
         width: min(760px, 100%);
         margin: 0 auto;
@@ -763,6 +1059,18 @@
 
         .gift-card.reverse .gift-media {
           order: 0;
+        }
+
+        .compare-grid,
+        .coach-grid,
+        .delay-grid,
+        .closing-grid,
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .coach-band .section {
+          width: min(100% - 22px, 1060px);
         }
 
         .signup-card {
@@ -1105,16 +1413,135 @@
       </section>
 
       <section class="section center-block">
-        <div class="final-live">
-          <h2 class="title center">Bạn muốn giữ 1 trong 7 chỗ?</h2>
-          <p class="paragraph">Điền đúng 3 thông tin: Họ tên, Số điện thoại, Email. Đăng ký xong bạn sẽ được chuyển sang trang chúc mừng để vào nhóm Zalo.</p>
-          <button class="cta-main" type="button" data-open-modal>
-            Gửi vé miễn phí cho tôi
-            <span>Nhấn vào đây để mở form đăng ký</span>
-          </button>
+        <p class="scarcity-line">Thử thách này duy nhất 7 chỗ ngồi miễn phí và có đúng 7 suất quà trị giá 125.970.000 VNĐ</p>
+        <p class="paragraph">Cách nhanh nhất để xây dựng hệ thống kinh doanh số tinh gọn trong thời đại AI: bấm nút bên dưới để giữ chỗ ngay bây giờ.</p>
+        <div class="arrows">⌄⌄⌄</div>
+        <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ ngay bây giờ</span></button>
+      </section>
+
+      <section class="section">
+        <p class="compare-title"><em>Bạn đã sẵn sàng xây dựng cho mình một hệ thống kinh doanh số tự động chưa?</em><br />Đây là những gì bạn có thể mong đợi từ <strong>thử thách 2 ngày</strong></p>
+        <div class="compare-grid">
+          <article class="compare-card before">
+            <h3>Trước<br />thử thách</h3>
+            <img src="assets/before-challenge.jpg" alt="Trước thử thách còn loay hoay với mô hình online" />
+            <ul>
+              <li>Từng nghĩ kiếm tiền online chỉ dành cho người giỏi công nghệ.</li>
+              <li>Đứng nhìn người khác có khách, có tiền nhưng không dám thử vì sợ thất bại.</li>
+              <li>Mô hình kinh doanh cũ khó mở rộng, làm nhiều nhưng thu nhập không tăng.</li>
+              <li>Không biết dùng công cụ, không có phễu hay hệ thống tự động.</li>
+              <li>Luôn không hài lòng với nguồn thu nhập hiện tại.</li>
+            </ul>
+          </article>
+          <article class="compare-card after">
+            <h3>Sau<br />thử thách</h3>
+            <img src="assets/after-challenge.jpg" alt="Sau thử thách có hệ thống doanh nghiệp số" />
+            <ul>
+              <li>Ngay tại lớp, bạn biết cách copy - dán để dựng hệ thống đầu tiên.</li>
+              <li>Không lý thuyết màu mè, chỉ tập trung vào việc làm ra kết quả thực tế.</li>
+              <li>Có phễu, có website, có nội dung chạy sẵn để thu hút khách tiềm năng.</li>
+              <li>Biết công cụ nào cần dùng, bước nào quan trọng và cách triển khai rõ ràng.</li>
+              <li>Sở hữu một mô hình có thể tăng tiến bằng hệ thống thay vì chỉ bằng sức người.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="coach-band">
+        <div class="section">
+          <h2 class="coach-title">Người huấn luyện bạn trong 2 ngày thử thách...</h2>
+          <div class="coach-grid">
+            <img src="assets/phat-coach-bio.jpg" alt="Huỳnh Tiến Phát" />
+            <div>
+              <h2 class="coach-name">Huỳnh Tiến Phát</h2>
+              <p class="coach-sub">Người đồng hành cùng những người có chuyên môn xây dựng nguồn thu nhập thứ hai thông qua hệ thống kinh doanh số.</p>
+              <ul class="coach-list">
+                <li>- Xây dựng công thức tăng trưởng online từ con số 0 và biến kinh nghiệm cá nhân thành hệ thống.</li>
+                <li>- Có khả năng tạo tệp khách hàng tiềm năng đều đặn bằng nội dung, phễu và cộng đồng.</li>
+                <li>- Tập trung vào mô hình đơn giản, thực chiến, phù hợp với người không rành công nghệ.</li>
+                <li>- Đồng hành trong nhiều chương trình về Affiliate tự động và doanh nghiệp số tinh gọn.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="big-warning-title">Bạn càng chờ<br />càng mất thêm tiền mặt...</h2>
+        <div class="delay-grid">
+          <div>
+            <p class="lesson-copy">Tôi nói thẳng: nếu bạn đang đọc đến đây, nghĩa là bạn đã từng nghĩ tới việc kiếm tiền online hoặc xây thêm một hướng đi mới.</p>
+            <p class="lesson-copy">Nhưng rồi... bạn lần tần.</p>
+            <ul class="x-list">
+              <li>Không biết bắt đầu từ đâu.</li>
+              <li>Không chắc mình có làm được không.</li>
+              <li>Sợ công nghệ, sợ quảng cáo, sợ thất bại.</li>
+            </ul>
+            <p class="lesson-copy"><em>Trong 2 ngày này, Phát sẽ giúp bạn hiểu cách một hệ thống kinh doanh số được xây dựng và vận hành từng bước.</em></p>
+          </div>
+          <img class="lesson-image" src="assets/hourglass.jpg" alt="Đồng hồ cát nhắc về thời gian chờ đợi" />
+        </div>
+      </section>
+
+      <section class="section center-block">
+        <h2 class="big-warning-title">Bây giờ - không phải lúc đợi nữa!</h2>
+        <p class="paragraph">Đây không phải một lớp học bình thường. Không phải lý thuyết chay. Không phải nghe cho vui.</p>
+        <p class="paragraph"><strong>Đây là 2 ngày nặng đô:</strong> mở toàn bộ hệ thống phía sau một mô hình kinh doanh số, giúp bạn hiểu cách xây dựng, vận hành và từng bước triển khai hệ thống của riêng mình.</p>
+        <p class="urgent">Nhấn tham gia thử thách ngay - trước khi hết sạch 7 chỗ ngồi</p>
+        <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ ngay bây giờ</span></button>
+      </section>
+
+      <section class="section">
+        <div class="bundle-box">
+          <h2 class="bundle-title">Đây là tất cả bạn nhận được</h2>
+          <p class="bundle-sub">Khi bạn đăng ký tham gia thử thách 2 ngày ngay hôm nay!</p>
+          <img class="bundle-image" src="assets/dns-hero.jpg" alt="Bộ Doanh nghiệp số tinh gọn" />
+          <ul class="bundle-list">
+            <li>Thử thách 2 ngày tự động hóa doanh nghiệp số: <span class="price-red">12.970.000 VNĐ</span></li>
+            <li>Tặng #1 - Hệ thống nội dung đăng lên MXH làm sẵn 365 ngày: <span class="price-red">10.970.000 VNĐ</span></li>
+            <li>Tặng #2 - Hệ thống nội dung chia sẻ giá trị 365 ngày: <span class="price-red">12.970.000 VNĐ</span></li>
+            <li>Tặng #3 - Hệ thống xây thương hiệu chuyên gia: <span class="price-red">12.970.000 VNĐ</span></li>
+            <li>Tặng #4 - Hệ thống xây kênh triệu view: <span class="price-red">7.970.000 VNĐ</span></li>
+            <li>Tặng #5 - Hệ thống đào tạo tự nhân bản: <span class="price-red">9.970.000 VNĐ</span></li>
+            <li>Tặng #6 - Hệ thống tài liệu phát triển trọn đời: <span class="price-red">39.970.000 VNĐ</span></li>
+            <li>Tặng #7 - Bí mật hệ thống dòng tiền trọn đời: <span class="price-red">19.970.000 VNĐ</span></li>
+            <li>Tặng #8 - Nhóm kín bí mật dòng tiền: <span class="price-red">Vô giá</span></li>
+          </ul>
+          <p class="gift-value price-red">Thông thường: 125.970.000 VNĐ</p>
+          <p class="free-now">Hôm nay: miễn phí</p>
+          <div class="arrows">⌄⌄⌄</div>
+          <button class="cta-small" type="button" data-open-modal>Tham gia thử thách 2 ngày<br /><span>Nhấn vào đây để được giữ chỗ ngay bây giờ</span></button>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Cái gì:</h3>
+            <p>Thử thách 2 ngày tìm hiểu cách xây doanh nghiệp số tinh gọn mà không cần giỏi công nghệ.</p>
+          </article>
+          <article class="info-card">
+            <h3>Khi nào:</h3>
+            <p>2 ngày qua Zoom. Lịch sẽ được gửi trong nhóm sau khi đăng ký.</p>
+          </article>
+          <article class="info-card">
+            <h3>Tại sao:</h3>
+            <p>Nếu bạn không bắt đầu ngay, cơ hội gần nhất có thể không còn.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section closing-grid">
+        <img class="lesson-image" src="assets/phat-sydney.jpg" alt="Huỳnh Tiến Phát tại Sydney" />
+        <div class="closing-copy">
+          <h2>Bạn có thể còn đang lưỡng lự...</h2>
+          <p>Trong khi đó, ngoài kia có hàng ngàn người đang tận dụng công cụ đòn bẩy và Internet để xây dựng hệ thống thu hút khách hàng mỗi ngày.</p>
+          <h2>Tham gia thử thách Affiliate tự động 2 ngày - <span class="green">miễn phí</span></h2>
+          <p>Đừng bỏ qua 2 ngày khám phá cách xây dựng hệ thống kinh doanh số của riêng bạn.</p>
+          <div class="arrows">⌄⌄⌄</div>
+          <button class="cta-small" type="button" data-open-modal>Tham gia thử thách Affiliate<br /><span>Nhấn vào đây để được giữ chỗ ngay bây giờ</span></button>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">Huynhtienphat.com - 2026 - Bảo mật - Xác minh</footer>
 
     <div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div class="modal-box">
